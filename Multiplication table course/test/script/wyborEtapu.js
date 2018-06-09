@@ -128,7 +128,7 @@ $(document).ready( function() {
 		var firstNumber = 5;
 		var secondNumber = 0;
 		var idNumber = '02';
-		var listEntry = '<li><div id="operation" class="operation"><div class="frame">'+firstNumber+'</div><div class="math-symbol">*</div><div class="frame">'+secondNumber+'</div><div class="math-symbol">=</div><input id="step3input'+idNumber+'"></div></li>'
+		var listEntry = '<li><div class="operation"><div class="frame">'+firstNumber+'</div><div class="math-symbol">*</div><div class="frame">'+secondNumber+'</div><div class="math-symbol">=</div><input id="step3input'+idNumber+'"></div></li>'
 		
 		
 		console.log('hello result is '+result);	

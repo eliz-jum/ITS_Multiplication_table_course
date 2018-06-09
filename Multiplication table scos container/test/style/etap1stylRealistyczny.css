@@ -37,6 +37,13 @@ body {
 	
 }
 
+.error-message {
+	color: red;
+	font-size: 22px;
+	margin: 15px 0;
+	font-weight: bold;
+}
+
 .img-tall img {
 	height: 300px;
 	margin-bottom: 20px;
