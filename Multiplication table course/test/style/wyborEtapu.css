@@ -1,0 +1,118 @@
+
+
+html {
+	background: url("../img/bgOpacity50.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+} 
+body {
+	
+}
+
+
+.is-invisible {
+	visibility: hidden;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.disabled {
+	pointer-events:none;
+}
+
+.correct {
+	background-color: #52cc2d;
+}
+
+.incorrect {
+	background-color: #da1d1d;
+}
+
+.transparent-container {
+	padding: 30px 50px;
+	
+}
+
+
+
+.operation {
+	display: flex;
+	flex-direction: row;
+	
+}
+
+.step-task-container {
+	padding: 35px 0;
+}
+
+.title {
+	
+}
+
+.content {
+	
+}
+
+input {
+	border: 4px solid #0094bb;
+	background-color: white;
+	height: 40px;
+	width: 50px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.frame {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 4px solid #0094bb;
+	background-color: #cecece;
+	height: 40px;
+	width: 50px;
+	font-size: 20px;
+	text-align: center;
+	pointer-events:none;
+}
+
+.math-symbol {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 20px;
+	font-size: 30px;
+	height: 50px;
+}
+
+ul {
+ list-style-type: none;
+ padding: 0;
+ }
+ 
+ li {
+	 margin-bottom: 10px;
+ }
+ 
+button {
+	border: 2px solid #0094bb;
+	border-radius: 4px;	 
+	background-color: white;
+	height: 50px;
+	width: 150px;
+	font-size: 20px;
+}
+
+ 
+button:hover{
+	background-color: #0094bb;
+	border-color:  #ffffff;
+	color: #ffffff;
+}
+ 
+ 
+ 
+ 

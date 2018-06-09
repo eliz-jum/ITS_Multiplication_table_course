@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>wyborEtapu</title>
+	
+	<link rel="stylesheet" href="style/wyborEtapu.css" type="text/css">	
+	<script src="global/APIWrapper.js"></script>
+	<script src="global/SCORMTestWrapper.js"></script>
+	<script src="global/jquery-3.3.1.min.js"></script>
+	<script src="script/wyborEtapu.js"></script>	
+
+
+</head>
+
+<body>
+	
+	<div class="transparent-container">
+	
+		<div class="header">
+			<h1>Test na wybor etapu</h1>
+		</div>
+		
+		<div id="step1" class="step-task-container">
+			<div class="title">
+				<h2>Mnożenie</h2>
+			</div>
+			<div class="content">
+				<h3>Julia ma w pokoju 2 półki. Na każdej z nich jest po 5 książek.</br>
+				Jakie to będzie mnożenie? Wypełnij pola.</h3>
+				
+				<div id="operation" class="operation">
+					<input id="step1input1">
+					<div class="math-symbol">*</div>
+					<input id="step1input2">
+				</div>
+			</div>
+		</div>
+		
+		<div id="step2" class="step-task-container is-hidden">
+			<div class="title">
+				<h2>Przemienność mnożenia</h2>
+			</div>
+			<div class="content">
+				<div id="operation" class="operation">
+					<div class="frame">
+						3
+					</div>
+					<div class="math-symbol">*</div>
+					<div class="frame">
+						2
+					</div>
+					<div class="math-symbol">=</div>
+					<div class="frame">
+						6
+					</div>
+				</div>
+				<h3>Czy wiesz jak inaczej to zapisać, aby wynik był taki sam?</h3>
+				
+				<div id="operation" class="operation">
+					<input id="step2input1">
+					<div class="math-symbol">*</div>
+					<input id="step2input2">
+					<div class="math-symbol">=</div>
+					<div class="frame">
+						6
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="step3" class="step-task-container is-hidden">
+			<div class="title">
+				<h2>Tabliczka Mnożenia</h2>
+			</div>
+			<div class="content">
+				<h3>Rozwiąż wszystkie przykłady.</h3>
+				<ul id="multiplicationTable">
+					<li>
+						<div id="operation" class="operation">
+							<div class="frame">
+								0
+							</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">
+								9
+							</div>
+							<div class="math-symbol">=</div>
+							<input id="step3input01">
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div id="finishButton" class="is-hidden">
+			<button id="finshButton">KONIEC</button>
+		</div>
+	</div>
+	
+</body>
+</html>

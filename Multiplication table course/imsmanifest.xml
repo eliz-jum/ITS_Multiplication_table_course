@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+	xmlns:lom="http://ltsc.ieee.org/xsd/LOM" identifier="uuid-83f0170b-21a8-4fa0-9695-860bbe336075" version="1"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+http://ltsc.ieee.org/xsd/LOM lom.xsd">
+	<metadata>
+		<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd">
+			<general>
+				<title>Multiplication table course</title>
+			</general>
+		</lom>
+		<schema>ADL SCORM</schema>
+		<schemaversion>2004 3rd Edition</schemaversion>
+	</metadata>
+	
+	
+	
+	<organizations default="multiplicationTableCourse">
+		<organization identifier="multiplicationTableCourse" structure="hierarchical" adlseq:objectivesGlobalToSystem="true">
+			<title>Multiplication table course</title>
+			
+			<item identifier="wyborEtapu1" identifierref="wyborEtapu" isvisible="true">
+				<title>Tabliczka mnozenia - test na wybor etapu</title>
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
+			
+			 
+			
+
+			
+			
+			
+			<imsss:sequencing>
+				<imsss:controlMode choice="true" flow="true" />
+			</imsss:sequencing>
+			
+		</organization>
+	</organizations>
+	
+	
+	
+	<resources>
+	
+		<resource type="webcontent" identifier="globalAssests" xml:base="test/" adlcp:scormType="asset">
+			<file href="global/APIWrapper.js" />
+			<file href="global/SCORMTestWrapper.js" />
+			<file href="global/jquery-3.3.1.min.js" />
+			<file href="img/bgOpacity50.png" />
+		</resource>
+	
+		<resource identifier="wyborEtapu" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="wyborEtapu.html">
+			<file href="wyborEtapu.html" />
+			<file href="script/wyborEtapu.js" />
+			<file href="style/wyborEtapu.css" />
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+		
+		
+	</resources>
+</manifest>

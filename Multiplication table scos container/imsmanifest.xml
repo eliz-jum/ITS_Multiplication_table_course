@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+	xmlns:lom="http://ltsc.ieee.org/xsd/LOM" identifier="uuid-83f0170b-21a8-4fa0-9695-860bbe336075" version="1"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+http://ltsc.ieee.org/xsd/LOM lom.xsd">
+	<metadata>
+		<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd">
+			<general>
+				<title>
+					<string language="en">Multiplication table scos container</string>
+				</title>
+				<language>en</language>  
+				<keyword> 
+					<string language="en">multiplicationTableScosContainer:1:AWN</string> 
+				</keyword> 
+			</general>
+		</lom>
+		<schema>ADL SCORM</schema>
+		<schemaversion>2004 3rd Edition</schemaversion>
+	</metadata>
+	
+	
+	
+	<organizations default="multiplicationTableScosContainer">
+		<organization identifier="multiplicationTableScosContainer" structure="hierarchical" adlseq:objectivesGlobalToSystem="true">
+			<title>Multiplication table scos container</title>
+			
+			<item identifier="etap1stylRealistyczny1" identifierref="etap1stylRealistyczny" isvisible="true">
+				<title>Tlumaczenie czym jest mnozenie - styl realistyczny</title>
+				<metadata> 
+					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
+						<general> 
+							<keyword> 
+								<string language="en">etap1stylRealistyczny:1:AWN</string> 
+							</keyword>  
+						</general>  
+					</lom> 
+				</metadata> 
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
+			
+			<item identifier="etap2stylRealistyczny1" identifierref="etap2stylRealistyczny" isvisible="true">
+				<title>Tlumaczenie przemiennosci mnozenia - styl realistyczny</title>
+				<metadata> 
+					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
+						<general> 
+							<keyword> 
+								<string language="en">etap2stylRealistyczny:1:AWN</string> 
+							</keyword>  
+						</general>  
+					</lom> 
+				</metadata> 
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
+			
+			<item identifier="etap3stylRealistyczny1" identifierref="etap3stylRealistyczny" isvisible="true">
+				<title>Utrwalanie mnozenia - styl realistyczny</title>
+				<metadata> 
+					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
+						<general> 
+							<keyword> 
+								<string language="en">etap3stylRealistyczny:1:AWN</string> 
+							</keyword>  
+						</general>  
+					</lom> 
+				</metadata> 
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
+			
+			
+			
+			<imsss:sequencing>
+				<imsss:controlMode choice="true" flow="true" />
+			</imsss:sequencing>
+			
+		</organization>
+	</organizations>
+	
+	
+	
+	<resources>
+	
+		<resource type="webcontent" identifier="globalAssests" xml:base="test/" adlcp:scormType="asset">
+			<file href="global/APIWrapper.js" />
+			<file href="global/SCORMTestWrapper.js" />
+			<file href="global/jquery-3.3.1.min.js" />
+			<file href="img/bgOpacity50.png" />
+		</resource>
+	
+		<resource identifier="etap1stylRealistyczny" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap1stylRealistyczny.html">
+			<file href="etap1stylRealistyczny.html" />
+			<file href="script/etap1stylRealistyczny.js" />
+			<file href="style/etap1stylRealistyczny.css" />
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+		<resource identifier="etap2stylRealistyczny" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap2stylRealistyczny.html">
+			<file href="etap2stylRealistyczny.html" />
+			<file href="script/etap2stylRealistyczny.js" />
+			<file href="style/etap2stylRealistyczny.css" />
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+		<resource identifier="etap3stylRealistyczny" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap3stylRealistyczny.html">
+			<file href="etap3stylRealistyczny.html" />
+			<file href="script/etap3stylRealistyczny.js" />
+			<file href="style/etap3stylRealistyczny.css" />
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+	</resources>
+</manifest>
