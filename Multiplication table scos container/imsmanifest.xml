@@ -130,6 +130,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="etap1stylRealistyczny.html" />
 			<file href="script/etap1stylRealistyczny.js" />
 			<file href="style/etap1stylRealistyczny.css" />
+			<file href="img/etap1realistyczny.png" />
+			<file href="img/etap1realistyczny2.png" />
+			
 			<dependency identifierref="globalAssests" />
 		</resource>
 		

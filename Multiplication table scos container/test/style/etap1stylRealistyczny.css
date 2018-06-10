@@ -44,9 +44,23 @@ body {
 	font-weight: bold;
 }
 
+.congratulations-message {
+	color: green;
+	font-size: 22px;
+	margin: 15px 0;
+	font-weight: bold;
+}
+
 .img-tall img {
 	height: 300px;
 	margin-bottom: 20px;
+	margin-right: 10px;
+	border: 2px solid black;
+}
+
+.img-short img {
+	height: 150px;
+	margin-bottom: 10px;
 	margin-right: 10px;
 	border: 2px solid black;
 }
@@ -125,6 +139,21 @@ button:hover{
 	color: #ffffff;
 }
  
- 
+.significant-1 {
+	color: #e92ebf;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+.significant-2 {
+	color: #7420ff;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+
+
+
+
  
  

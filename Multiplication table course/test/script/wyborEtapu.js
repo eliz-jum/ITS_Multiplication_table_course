@@ -150,6 +150,8 @@ $(document).ready( function() {
 	$("#finishButton").click(function(){
 		console.log('finish');
 		getScoByKeyword()
+		$('#finishMessage').removeClass('is-hidden');
+		$('#activeBody').addClass('is-hidden');
 		//setObjectivesStatusForSCO();
 	});
 	
