@@ -132,6 +132,32 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 				</imsss:sequencing>
 			</item>
 			
+			
+			<item identifier="etap1stylCzynnosciowy1" identifierref="etap1stylCzynnosciowy" isvisible="true">
+				<title>Tlumaczenie czym jest mnozenie - styl czynnosciowy</title>
+				<metadata> 
+					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
+						<general> 
+							<keyword> 
+								<string language="en">etap1stylCzynnosciowy:1:AWN</string> 
+							</keyword>  
+						</general>  
+					</lom> 
+				</metadata> 
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
+			
 			<imsss:sequencing>
 				<imsss:controlMode choice="true" flow="true" />
 			</imsss:sequencing>
@@ -177,6 +203,15 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="etap1stylIntegralny.html" />
 			<file href="script/etap1stylIntegralny.js" />
 			<file href="style/etap1stylIntegralny.css" />
+			<file href="img/etap1realistyczny.png" />
+			<file href="img/etap1realistyczny2.png" />
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+		<resource identifier="etap1stylCzynnosciowy" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap1stylCzynnosciowy.html">
+			<file href="etap1stylCzynnosciowy.html" />
+			<file href="script/etap1stylCzynnosciowy.js" />
+			<file href="style/etap1stylCzynnosciowy.css" />
 			<file href="img/etap1realistyczny.png" />
 			<file href="img/etap1realistyczny2.png" />
 			<dependency identifierref="globalAssests" />

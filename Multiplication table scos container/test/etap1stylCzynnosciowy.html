@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>etap1wyborStylu</title>
+	
+	<link rel="stylesheet" href="style/etap1stylIntegranly.css" type="text/css">	
+	<script src="global/APIWrapper.js"></script>
+	<script src="global/SCORMTestWrapper.js"></script>
+	<script src="global/jquery-3.3.1.min.js"></script>
+	<script src="script/etap1stylIntegranly.js"></script>	
+
+
+</head>
+
+<body>
+	<div class="transparent-container">
+		<div id="activeBody">
+			<div class="header">
+				<h1>Tłumaczenie czym jest mnożenie - styl integralny</h1>
+			</div>
+
+			<div id="zad1" class="step-task-container">
+				<div class="title">
+					<h2>Zadanie 1</h2>
+				</div>
+				<div class="content">
+					<h3>Na urodziny Ali przyszły 4 osoby. Każdy przyniósł po dwa prezenty.</h3>
+					<div class="img-tall">
+						<img src="img/etap1realistyczny.png">
+						<img src="img/etap1realistyczny.png">
+						<img src="img/etap1realistyczny.png">
+						<img src="img/etap1realistyczny.png">
+					</div>
+					<h3>Dodaj wszystkie prezenty.</h3>
+					<div id="operation" class="operation">
+						<div class="frame">2</div>
+						<div class="math-symbol">+</div>
+						<div class="frame">2</div>
+						<div class="math-symbol">+</div>
+						<div class="frame">2</div>
+						<div class="math-symbol">+</div>
+						<div class="frame">2</div>
+						<div class="math-symbol">=</div>
+						<input id="zad1input1">
+					</div>
+					<div class="error-message is-hidden" id="errorMessage1">Policz dokładnie</div>
+					<div class="congratulations-message is-hidden" id="congratMessage1">Wspaniale!</div>
+					
+					<div id="zad1part2"  class="is-hidden">
+						<h3>Ile jest dwójek?</h3>
+						<input id="zad1input2">
+						<div class="error-message is-hidden" id="errorMessage2">Dwójek jest tyle samo ilu przyszło gości</div>
+						<div class="congratulations-message is-hidden" id="congratMessage2">Wspaniale!</div>
+					</div>
+					
+					<div id="zad1part3"  class="is-hidden">
+						<h3>Mamy cztery dwójki. To oznacza mnożenie:</h3>
+						<div id="operation" class="operation">
+							<div class="frame significant-1">4</div>
+							<div class="math-symbol">*</div>
+							<div class="frame significant-2">2</div>
+						</div>
+						<h3>
+							<span class="significant-1">4</span>
+							gości, każdy przyniusł po
+							<span class="significant-2">2</span>
+							prezenty.
+						</h3>
+					</div>
+				</div>
+			</div>
+			
+			<div id="nextButtonDiv" class="is-hidden">
+				<button id="nextButton">dalej</button>
+			</div>
+			
+			<div id="zad2" class="step-task-container is-hidden">
+				<div class="title">
+					<h2>Zadanie 2</h2>
+				</div>
+				<div class="content">
+					<h3>5 przyjaciół wybrało sie na grzyby. Każdy zebrał po 3 grzyby</h3>
+					<div class="img-short">
+						<img src="img/etap1realistyczny2.png">
+						<img src="img/etap1realistyczny2.png">
+						<img src="img/etap1realistyczny2.png">
+						<img src="img/etap1realistyczny2.png">
+						<img src="img/etap1realistyczny2.png">
+					</div>
+					<h3>Jakie to jest mnożenie?</h3>
+					<div id="operation" class="operation">
+						<input id="zad2input1">
+						<div class="math-symbol">*</div>
+						<input id="zad2input2">
+					</div>
+					<div class="error-message is-hidden" id="errorMessage3">Niestety to nie jest prawidłowa odpowiedź. Kliknij KONIC, a dostaniesz kolejną szansę z troche innym zadaniem.</div>
+					<div class="congratulations-message is-hidden" id="congratMessage3">Wspaniale!</div>
+					
+				</div>
+			</div>
+
+			<div id="finishButton" class="is-hidden">
+				<button id="finshButton">koniec</button>
+			</div>
+		</div>
+		
+		<div id="finishMessage" class="is-hidden">
+			<h1>Poczekaj, aż nauczyciel zaakceptuje dalszą częsć kursu</h1>
+		</div>
+	</div>
+
+</body>
+</html>
