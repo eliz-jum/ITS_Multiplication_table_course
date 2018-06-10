@@ -107,6 +107,30 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			</item>
 			
 			
+			<item identifier="etap1stylIntegralny1" identifierref="etap1stylIntegralny" isvisible="true">
+				<title>Tlumaczenie czym jest mnozenie - styl integralny</title>
+				<metadata> 
+					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
+						<general> 
+							<keyword> 
+								<string language="en">etap1stylIntegralny:1:AWN</string> 
+							</keyword>  
+						</general>  
+					</lom> 
+				</metadata> 
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
 			
 			<imsss:sequencing>
 				<imsss:controlMode choice="true" flow="true" />
@@ -132,7 +156,6 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="style/etap1stylRealistyczny.css" />
 			<file href="img/etap1realistyczny.png" />
 			<file href="img/etap1realistyczny2.png" />
-			
 			<dependency identifierref="globalAssests" />
 		</resource>
 		
@@ -147,6 +170,15 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="etap3stylRealistyczny.html" />
 			<file href="script/etap3stylRealistyczny.js" />
 			<file href="style/etap3stylRealistyczny.css" />
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+		<resource identifier="etap1stylIntegralny" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap1stylIntegralny.html">
+			<file href="etap1stylIntegralny.html" />
+			<file href="script/etap1stylIntegralny.js" />
+			<file href="style/etap1stylIntegralny.css" />
+			<file href="img/etap1realistyczny.png" />
+			<file href="img/etap1realistyczny2.png" />
 			<dependency identifierref="globalAssests" />
 		</resource>
 		

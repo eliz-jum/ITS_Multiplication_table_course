@@ -36,6 +36,7 @@ $(document).ready( function() {
 			$('#congratMessage1').removeClass('is-hidden');
 			$('#errorMessage1').addClass('is-hidden');
 			$('#zad1part2').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		}
 		else {
 			input.addClass("incorrect");
@@ -71,7 +72,6 @@ $(document).ready( function() {
 	});
 
 	$('#zad2input1').keyup(function(){
-		console.log('hi');
 		if ($('#zad2input2').val()) {
 			var input1 = $(this);
 			var input2 = $('#zad2input2');
@@ -91,7 +91,7 @@ $(document).ready( function() {
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap1stylIntegranly';
+				step = 'etap1stylIntegralny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
@@ -121,7 +121,7 @@ $(document).ready( function() {
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap1stylIntegranly';
+				step = 'etap1stylIntegralny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
