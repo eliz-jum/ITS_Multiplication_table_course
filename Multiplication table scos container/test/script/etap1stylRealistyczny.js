@@ -29,9 +29,8 @@ $(document).ready( function() {
 	$('#zad1input1').keyup(function(){
 		var input = $(this);
 		var number = input.val();
-		console.log('wpisal '+number);
 		
-		if (number==8 ) {
+		if ( number==8 ) {
 			input.removeClass("incorrect");
 			input.addClass("correct disabled");
 			$('#congratMessage1').removeClass('is-hidden');
@@ -44,6 +43,164 @@ $(document).ready( function() {
 		}
 		
     });
+	
+	$('#zad1input2').keyup(function(){
+		var input = $(this);
+		var number = input.val();
+		
+		if ( number==4 ) {
+			input.removeClass("incorrect");
+			input.addClass("correct disabled");
+			$('#congratMessage2').removeClass('is-hidden');
+			$('#errorMessage2').addClass('is-hidden');
+			$('#zad1part3').removeClass('is-hidden');
+			$('#nextButtonDiv').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		}
+		else {
+			input.addClass("incorrect");
+			$('#errorMessage2').removeClass('is-hidden');
+		}
+		
+    });	
+	
+	$("#nextButton").click(function(){
+		$('#zad2').removeClass('is-hidden');
+		$('#nextButton').addClass('disabled');
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+	});
+
+	$('#zad2input1').keyup(function(){
+		console.log('hi');
+		if ($('#zad2input2').val()) {
+			var input1 = $(this);
+			var input2 = $('#zad2input2');
+			
+			var firstNumber = input1.val();
+			var secondNumber = input2.val();
+			
+			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
+				input1.removeClass("incorrect");
+				input2.removeClass("incorrect");
+				input1.addClass("correct disabled");
+				input2.addClass("correct disabled");
+				$('#congratMessage3').removeClass('is-hidden');
+				$('#errorMessage3').addClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				
+			}
+			else {
+				input1.addClass("incorrect");
+				input2.addClass("incorrect");
+				$('#errorMessage3').removeClass('is-hidden');
+			}
+		}
+    });
+	
+	$('#zad2input2').keyup(function(){
+		if ($('#zad2input1').val()) {
+			var input1 = $('#zad2input1');
+			var input2 = $(this);
+			
+			var firstNumber = input1.val();
+			var secondNumber = input2.val();
+			
+			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
+				input1.removeClass("incorrect");
+				input2.removeClass("incorrect");
+				input1.addClass("correct disabled");
+				input2.addClass("correct disabled");
+				$('#congratMessage3').removeClass('is-hidden');
+				$('#errorMessage3').addClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			}
+			else {
+				input1.addClass("incorrect");
+				input2.addClass("incorrect");
+				$('#errorMessage3').removeClass('is-hidden');
+			}
+		}
+    });
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+	$("#finishButton").click(function(){
+		console.log('finish');
+		getScoByKeyword()
+		$('#finishMessage').removeClass('is-hidden');
+		$('#activeBody').addClass('is-hidden');
+		//setObjectivesStatusForSCO();
+	});
+	
+	
+			
+			
+	function getScoByKeyword(){
+		
+		doInitialize();
+		console.log('nasz keyword: '+step);
+		
+		var objectivesCount = doGetValue("cmi.objectives._count");
+		var keywordOfWrong = step;
+		var recommendationRule = "KEYWORD_EQUAL_TO";
+		for (var i=0; i < objectivesCount; i++) {
+			var idObjective = doGetValue("cmi.objectives." + i + ".id");
+			if (idObjective == "its.run") {
+				
+				console.log('Jestem w its run! Pierwszy objectives');
+				console.log(doGetValue("cmi.objectives." + i + ".description"));
+				
+				var ta1 = "\"SearchConditions=(\"general/keyword=" + keywordOfWrong + "\")\"";
+				var ta2 = "\"RecommendationRule="+ recommendationRule +"\"";
+				var trigger_actions = ta1 + ";" + ta2;
+				doSetValue("cmi.objectives." + i + ".description", trigger_actions);
+				doCommit();
+				console.log('Jestem w its run! 2 objectives');
+				console.log(doGetValue("cmi.objectives." + i + ".description"));
+				break;
+			}
+			
+		}
+	}		
+			
+			
+			
+			
+			
+			
+			
+	function setObjectivesStatusForSCO() {
+			var objectivesCount = doGetValue("cmi.objectives._count");
+			for (var i = 0; i < objectivesCount; i++) {
+				var idObjective = doGetValue("cmi.objectives." + i + ".id");
+				var status = "cmi.objectives." + i + ".success_status";
+				var scoreRaw = "cmi.objectives." + i + ".score.raw";
+				var scoreScaled = "cmi.objectives." + i + ".score.scaled";
+				
+				
+				if (idObjective == "learningStyle") {
+					
+					doSetValue(status, CMI_OBJECTIVES_SUCCESS_STATUS_PASSED);
+					doSetValue(scoreRaw, 23);
+					doSetValue(scoreScaled, 0.25);
+					
+					console.log('status passed '+ doGetValue(status));
+					console.log('score raw 23 ' + doGetValue(scoreRaw));
+					console.log('score scaled 23 ' + doGetValue(scoreScaled));
+					
+				}
+			}
+		}		
+			
 	
 			
 });

@@ -98,6 +98,7 @@ ul {
  }
  
 button {
+	text-transform: uppercase;
 	border: 2px solid #0094bb;
 	border-radius: 4px;	 
 	background-color: white;

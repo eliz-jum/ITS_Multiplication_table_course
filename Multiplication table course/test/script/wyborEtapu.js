@@ -66,6 +66,7 @@ $(document).ready( function() {
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		}
     });	
@@ -83,18 +84,19 @@ $(document).ready( function() {
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#step3').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
 				step = 'etap2stylRealistyczny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		}
     });
 	$('#step2input2').keyup(function(){
-		if ($('#step2input2').val()) {
+		if ($('#step2input1').val()) {
 			var input1 = $('#step2input1');
 			var input2 = $(this);
 			
@@ -105,12 +107,14 @@ $(document).ready( function() {
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#step3').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
 				step = 'etap2stylRealistyczny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		}
     });
@@ -141,6 +145,7 @@ $(document).ready( function() {
 			resultInput.addClass("incorrect disabled");
 			resultInput.addClass("incorrect disabled");
 			$('#finishButton').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		}
 		
     });
