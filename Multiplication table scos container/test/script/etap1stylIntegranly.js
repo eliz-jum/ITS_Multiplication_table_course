@@ -26,130 +26,115 @@ $(document).ready( function() {
         }
     });
 	
-	$('#step1input1').keyup(function(){
-		if ($('#step1input2').val()) {
-			var input1 = $(this);
-			var input2 = $('#step1input2');
-			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if ((firstNumber==2 && secondNumber==5) || (firstNumber==5 && secondNumber==2)) {
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
-				$('#step2').removeClass('is-hidden');
-			}
-			else {
-				step = "etap1stylRealistyczny";
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
-				$('#finishButton').removeClass('is-hidden');
-			}
-		}
-    });
-	
-	$('#step1input2').keyup(function(){
-		if ($('#step1input1').val()) {
-			var input1 = $('#step1input1');
-			var input2 = $(this);
-			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if ((firstNumber==2 && secondNumber==5) || (firstNumber==5 && secondNumber==2)) {
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
-				$('#step2').removeClass('is-hidden');
-			}
-			else {
-				step = "etap1stylRealistyczny";
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-		}
-    });	
-	
-
-	$('#step2input1').keyup(function(){
-		if ($('#step2input2').val()) {
-			var input1 = $(this);
-			var input2 = $('#step2input2');
-			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if (firstNumber==2 && secondNumber==3) {
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
-				$('#step3').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-			else {
-				step = 'etap2stylRealistyczny';
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-		}
-    });
-	$('#step2input2').keyup(function(){
-		if ($('#step2input1').val()) {
-			var input1 = $('#step2input1');
-			var input2 = $(this);
-			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if (firstNumber==2 && secondNumber==3) {
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
-				$('#step3').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-			else {
-				step = 'etap2stylRealistyczny';
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-		}
-    });
-
-	
-	
-	
-	
-	
-	
-	$('#step3input01').keyup(function(){
-		var resultInput = $(this);
-		var result = resultInput.val();
-		var firstNumber = 5;
-		var secondNumber = 0;
-		var idNumber = '02';
-		var listEntry = '<li><div class="operation"><div class="frame">'+firstNumber+'</div><div class="math-symbol">*</div><div class="frame">'+secondNumber+'</div><div class="math-symbol">=</div><input id="step3input'+idNumber+'"></div></li>'
+	$('#zad1input1').keyup(function(){
+		var input = $(this);
+		var number = input.val();
 		
-		if (result==0) {
-			resultInput.addClass("correct disabled");
-			$("#multiplicationTable").append(listEntry);
+		if ( number==8 ) {
+			input.removeClass("incorrect");
+			input.addClass("correct disabled");
+			$('#congratMessage1').removeClass('is-hidden');
+			$('#errorMessage1').addClass('is-hidden');
+			$('#zad1part2').removeClass('is-hidden');
 		}
 		else {
-			step = 'etap3stylRealistyczny';
-			resultInput.addClass("incorrect disabled");
-			resultInput.addClass("incorrect disabled");
-			$('#finishButton').removeClass('is-hidden');
-			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			input.addClass("incorrect");
+			$('#errorMessage1').removeClass('is-hidden');
 		}
 		
     });
 	
+	$('#zad1input2').keyup(function(){
+		var input = $(this);
+		var number = input.val();
+		
+		if ( number==4 ) {
+			input.removeClass("incorrect");
+			input.addClass("correct disabled");
+			$('#congratMessage2').removeClass('is-hidden');
+			$('#errorMessage2').addClass('is-hidden');
+			$('#zad1part3').removeClass('is-hidden');
+			$('#nextButtonDiv').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		}
+		else {
+			input.addClass("incorrect");
+			$('#errorMessage2').removeClass('is-hidden');
+		}
+		
+    });	
+	
+	$("#nextButton").click(function(){
+		$('#zad2').removeClass('is-hidden');
+		$('#nextButton').addClass('disabled');
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+	});
+
+	$('#zad2input1').keyup(function(){
+		console.log('hi');
+		if ($('#zad2input2').val()) {
+			var input1 = $(this);
+			var input2 = $('#zad2input2');
+			
+			var firstNumber = input1.val();
+			var secondNumber = input2.val();
+			
+			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
+				step = 'etap2stylRealistyczny';
+				input1.removeClass("incorrect");
+				input2.removeClass("incorrect");
+				input1.addClass("correct disabled");
+				input2.addClass("correct disabled");
+				$('#congratMessage3').removeClass('is-hidden');
+				$('#errorMessage3').addClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			}
+			else {
+				step = 'etap2stylIntegranly';
+				input1.addClass("incorrect disabled");
+				input2.addClass("incorrect disabled");
+				$('#errorMessage3').removeClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			}
+		}
+    });
+	
+	$('#zad2input2').keyup(function(){
+		if ($('#zad2input1').val()) {
+			var input1 = $('#zad2input1');
+			var input2 = $(this);
+			
+			var firstNumber = input1.val();
+			var secondNumber = input2.val();
+			
+			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
+				step = 'etap2stylRealistyczny';
+				input1.removeClass("incorrect");
+				input2.removeClass("incorrect");
+				input1.addClass("correct disabled");
+				input2.addClass("correct disabled");
+				$('#congratMessage3').removeClass('is-hidden');
+				$('#errorMessage3').addClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			}
+			else {
+				step = 'etap2stylIntegranly';
+				input1.addClass("incorrect disabled");
+				input2.addClass("incorrect disabled");
+				$('#errorMessage3').removeClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			}
+		}
+    });
+
 
 	
 	$("#finishButton").click(function(){
+		console.log('finish');
 		getScoByKeyword()
 		$('#finishMessage').removeClass('is-hidden');
 		$('#activeBody').addClass('is-hidden');
@@ -173,8 +158,6 @@ $(document).ready( function() {
 				var trigger_actions = ta1 + ";" + ta2;
 				doSetValue("cmi.objectives." + i + ".description", trigger_actions);
 				doCommit();
-				console.log('Jestem w its run! 2 objectives');
-				console.log(doGetValue("cmi.objectives." + i + ".description"));
 				break;
 			}
 		}

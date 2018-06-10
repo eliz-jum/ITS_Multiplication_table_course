@@ -80,6 +80,7 @@ $(document).ready( function() {
 			var secondNumber = input2.val();
 			
 			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
+				step = 'etap2stylRealistyczny';
 				input1.removeClass("incorrect");
 				input2.removeClass("incorrect");
 				input1.addClass("correct disabled");
@@ -88,12 +89,14 @@ $(document).ready( function() {
 				$('#errorMessage3').addClass('is-hidden');
 				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-				
 			}
 			else {
-				input1.addClass("incorrect");
-				input2.addClass("incorrect");
+				step = 'etap1stylIntegranly';
+				input1.addClass("incorrect disabled");
+				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		}
     });
@@ -107,6 +110,7 @@ $(document).ready( function() {
 			var secondNumber = input2.val();
 			
 			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
+				step = 'etap2stylRealistyczny';
 				input1.removeClass("incorrect");
 				input2.removeClass("incorrect");
 				input1.addClass("correct disabled");
@@ -117,20 +121,16 @@ $(document).ready( function() {
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				input1.addClass("incorrect");
-				input2.addClass("incorrect");
+				step = 'etap1stylIntegranly';
+				input1.addClass("incorrect disabled");
+				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		}
     });
 
-	
-	
-	
-	
-	
-	
-	
 
 	
 	$("#finishButton").click(function(){
@@ -145,9 +145,7 @@ $(document).ready( function() {
 			
 			
 	function getScoByKeyword(){
-		
 		doInitialize();
-		console.log('nasz keyword: '+step);
 		
 		var objectivesCount = doGetValue("cmi.objectives._count");
 		var keywordOfWrong = step;
@@ -155,20 +153,13 @@ $(document).ready( function() {
 		for (var i=0; i < objectivesCount; i++) {
 			var idObjective = doGetValue("cmi.objectives." + i + ".id");
 			if (idObjective == "its.run") {
-				
-				console.log('Jestem w its run! Pierwszy objectives');
-				console.log(doGetValue("cmi.objectives." + i + ".description"));
-				
 				var ta1 = "\"SearchConditions=(\"general/keyword=" + keywordOfWrong + "\")\"";
 				var ta2 = "\"RecommendationRule="+ recommendationRule +"\"";
 				var trigger_actions = ta1 + ";" + ta2;
 				doSetValue("cmi.objectives." + i + ".description", trigger_actions);
 				doCommit();
-				console.log('Jestem w its run! 2 objectives');
-				console.log(doGetValue("cmi.objectives." + i + ".description"));
 				break;
 			}
-			
 		}
 	}		
 			
