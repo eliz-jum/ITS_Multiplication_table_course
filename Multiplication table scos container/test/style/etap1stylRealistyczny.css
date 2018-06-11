@@ -114,6 +114,10 @@ input {
 	height: 50px;
 }
 
+.next-button {
+	margin-bottom: 50px;
+}
+
 ul {
  list-style-type: none;
  padding: 0;

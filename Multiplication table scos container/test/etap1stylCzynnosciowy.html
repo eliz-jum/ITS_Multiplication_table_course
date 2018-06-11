@@ -31,23 +31,23 @@
 					<h3>3 przyjaciół wybrało sie na grzyby. Każdy zebrał po 2 grzyby</h3>
 					<h3>Włóz po dwa grzyby do kadego koszyka.</h3>
 					<div class="img-short">
-							<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
-							<img src="img/basketLeftWithMushroom.png" class="is-hidden">
-							<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
-							<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
-							
-							<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
-							<img src="img/basketLeftWithMushroom.png" class="is-hidden">
-							<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
-							<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
-							
-							<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
-							<img src="img/basketLeftWithMushroom.png" class="is-hidden">
-							<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
-							<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
+						<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
+						<img src="img/basketLeftWithMushroom.png" class="is-hidden">
+						<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
+						<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
+						
+						<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
+						<img src="img/basketLeftWithMushroom.png" class="is-hidden">
+						<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
+						<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
+						
+						<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
+						<img src="img/basketLeftWithMushroom.png" class="is-hidden">
+						<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
+						<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
 					</div>
 					<div class="draggable-img-container">
-						<img src="img/mushroom.png" id="draggableImgFirst" class="draggable-img-first ui-widget-content">
+						<img src="img/mushroom.png" id="draggableImgFirst" class="draggable-img-first">
 						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
 						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
 						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			
-			<div id="nextButtonDiv" class="is-hidden">
+			<div id="nextButtonDiv" class="is-hidden next-button">
 				<button id="nextButton">dalej</button>
 			</div>
 			
@@ -106,22 +106,83 @@
 					<h2>Zadanie 2</h2>
 				</div>
 				<div class="content">
-					<h3>5 przyjaciół wybrało sie na grzyby. Każdy zebrał po 3 grzyby</h3>
-					<div class="img-short">
-						<img src="img/etap1realistyczny2.png">
-						<img src="img/etap1realistyczny2.png">
-						<img src="img/etap1realistyczny2.png">
-						<img src="img/etap1realistyczny2.png">
-						<img src="img/etap1realistyczny2.png">
-					</div>
-					<h3>Jakie to jest mnożenie?</h3>
+					<h3>Mamy mnożenie:</h3>
 					<div id="operation" class="operation">
-						<input id="zad2input1">
+						<div class="frame significant-1">4</div>
 						<div class="math-symbol">*</div>
-						<input id="zad2input2">
+						<div class="frame significant-2">3</div>
 					</div>
-					<div class="error-message is-hidden" id="errorMessage3">Niestety to nie jest prawidłowa odpowiedź. Kliknij KONIC, a dostaniesz kolejną szansę z troche innym zadaniem.</div>
+					<h3>
+						Pociąg ma 
+						<span class="significant-1">4</span>
+						wagony. Ilu pasażerów musi jechać w każdym wagonie?
+					</h3>
+					<input id="zad2input1" class="significant-2">
+					<div class="error-message is-hidden" id="errorMessage3">Niestety to nie jest prawidłowa odpowiedź. Kliknij KONIC, a dostaniesz kolejną szansę z innym zadaniem.</div>
 					<div class="congratulations-message is-hidden" id="congratMessage3">Wspaniale!</div>
+					
+					<div id="zad2part2"  class="is-hidden">
+						<h3>A teraz powkładaj pasażerów do wagonów, tak aby mnożenie się zgadzało.</h3>
+						<div class="img-short2">
+							<img src="img/truckSide.png" class="droppable-img2 ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden">
+							<img src="img/truckMiddle.png" class="droppable-img2 img-middle-part ui-widget-header">
+							<img src="img/truckMiddleFull.png" class="is-hidden img-middle-part">
+							<img src="img/truckSide.png" class="droppable-img2 img-right-part ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden img-right-part">
+								
+							<img src="img/truckSide.png" class="droppable-img2 ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden">
+							<img src="img/truckMiddle.png" class="droppable-img2 img-middle-part ui-widget-header">
+							<img src="img/truckMiddleFull.png" class="is-hidden img-middle-part">
+							<img src="img/truckSide.png" class="droppable-img2 img-right-part ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden img-right-part">
+
+							<img src="img/truckSide.png" class="droppable-img2 ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden">
+							<img src="img/truckMiddle.png" class="droppable-img2 img-middle-part ui-widget-header">
+							<img src="img/truckMiddleFull.png" class="is-hidden img-middle-part">
+							<img src="img/truckSide.png" class="droppable-img2 img-right-part ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden img-right-part">
+							
+							<img src="img/truckSide.png" class="droppable-img2 ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden">
+							<img src="img/truckMiddle.png" class="droppable-img2 img-middle-part ui-widget-header">
+							<img src="img/truckMiddleFull.png" class="is-hidden img-middle-part">
+							<img src="img/truckSide.png" class="droppable-img2 img-right-part ui-widget-header">
+							<img src="img/truckSideFull.png" class="is-hidden img-right-part">
+						</div>
+						
+						<div class="draggable-img-container2">
+							<img src="img/truckPassenger.png" id="draggableImgFirst2" class="draggable-img-first ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+							<img src="img/truckPassenger.png" class="draggable-img2 ui-widget-content">
+						</div>
+						<div class="congratulations-message is-hidden" id="congratMessage4">Wspaniale!</div>
+					</div>
+					
+					<div id="zad2part3"  class="is-hidden">
+						<h3>Ile pasażerów jedzie pociągiem?</h3>
+						<div id="operation" class="operation">
+							<div class="frame">4</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">3</div>
+							<div class="math-symbol">=</div>
+							<input id="zad2input2">
+						</div>
+						<div class="error-message is-hidden" id="errorMessage5">Policz dokładnie wszystkich pasażerów</div>
+						<div class="congratulations-message is-hidden" id="congratMessage5">Wspaniale!</div>
+					</div>
 					
 				</div>
 			</div>

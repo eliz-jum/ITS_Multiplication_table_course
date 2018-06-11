@@ -61,7 +61,15 @@ body {
 .img-short img {
 	height: 150px;
 	margin-bottom: 10px;
-	
+}
+
+.img-short2 img {
+	height: 180px;
+	margin-bottom: 10px;
+}
+
+.img-middle-part {
+	margin-left: -5px;
 }
 
 .img-right-part {
@@ -79,6 +87,25 @@ body {
 }
 
 .draggable-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.draggable-img-container2 {
+	position: relative;
+	margin: 10px 0;
+}
+
+.draggable-img-container2 img{
+	height: 120px;
+}
+
+.draggable-img-first2 {
+	position: relative;
+}
+
+.draggable-img2 {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -131,6 +158,10 @@ input {
 	margin: 0 20px;
 	font-size: 30px;
 	height: 50px;
+}
+
+.next-button {
+	margin-bottom: 50px;
 }
 
 ul {

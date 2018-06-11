@@ -217,6 +217,11 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="img/basketRight.png" />
 			<file href="img/basketRightWithMushroom.png" />
 			<file href="img/mushroom.png" />
+			<file href="img/truckSide.png" />
+			<file href="img/truckSideFull.png" />
+			<file href="img/truckMiddle.png" />
+			<file href="img/truckMiddleFull.png" />
+			<file href="img/truckPassenger.png" />
 			<dependency identifierref="globalAssests" />
 		</resource>
 		

@@ -4,6 +4,7 @@ $(document).ready( function() {
 		
 	var step;
 	var draggableItemsCount = 0;
+	var draggableItemsCount2 = 0;
 	
 		
 	$('input').keydown(function (e) {
@@ -43,9 +44,7 @@ $(document).ready( function() {
 				}
 			}
 		});
-		
 	} );
-	
 	
 	$('#zad1input1').keyup(function(){
 		var input = $(this);
@@ -55,6 +54,7 @@ $(document).ready( function() {
 			input.removeClass("incorrect");
 			input.addClass("correct disabled");
 			$('#errorMessage1').addClass('is-hidden');
+			$('#congratMessage1').removeClass('is-hidden');
 			$('#zad1part2').removeClass('is-hidden');
 			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		}
@@ -90,64 +90,63 @@ $(document).ready( function() {
 	});
 
 	$('#zad2input1').keyup(function(){
-		console.log('hi');
-		if ($('#zad2input2').val()) {
-			var input1 = $(this);
-			var input2 = $('#zad2input2');
+			var input = $(this);
+			var number = input.val();
 			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
-				step = 'etap2stylRealistyczny';
-				input1.removeClass("incorrect");
-				input2.removeClass("incorrect");
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
+			if (number==3) {
+				step = 'etap2stylCzynnosciowy';
+				//input.removeClass("incorrect");
+				input.addClass("correct disabled");
+				//$('#errorMessage3').addClass('is-hidden');
 				$('#congratMessage3').removeClass('is-hidden');
-				$('#errorMessage3').addClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
+				$('#zad2part2').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap2stylIntegranly';
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
+				step = 'etap1stylRealistyczny';
+				input.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
 				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
-		}
     });
 	
+	$( function() {
+		$( ".draggable-img2" ).draggable();
+		$( ".droppable-img2" ).droppable({
+			drop: function( event, ui ) {
+				draggableItemsCount2++;
+				console.log(draggableItemsCount2);
+				var thisItem = $( this );
+				thisItem.addClass( 'is-hidden' );
+				thisItem.next().removeClass( 'is-hidden' );
+				$(ui.draggable).addClass( 'is-hidden' );
+				if (draggableItemsCount2 == 12) {
+					$('#congratMessage4').removeClass('is-hidden');
+					$('#draggableImgFirst2').addClass('is-hidden');
+					$('#zad2part3').removeClass('is-hidden');
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				}
+			}
+		});
+	} );
+	
 	$('#zad2input2').keyup(function(){
-		if ($('#zad2input1').val()) {
-			var input1 = $('#zad2input1');
-			var input2 = $(this);
+			var input = $(this);
+			var number = input.val();
 			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
-				step = 'etap2stylRealistyczny';
-				input1.removeClass("incorrect");
-				input2.removeClass("incorrect");
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
-				$('#congratMessage3').removeClass('is-hidden');
-				$('#errorMessage3').addClass('is-hidden');
+			if (number==12) {
+				input.removeClass("incorrect");
+				input.addClass("correct disabled");
+				$('#errorMessage5').addClass('is-hidden');
+				$('#congratMessage5').removeClass('is-hidden');
 				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap2stylIntegranly';
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
-				$('#errorMessage3').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				input.addClass("incorrect");
+				$('#errorMessage5').removeClass('is-hidden');
 			}
-		}
     });
 
 
