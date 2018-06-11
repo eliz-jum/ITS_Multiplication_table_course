@@ -40,7 +40,7 @@ $(document).ready( function() {
 				$('#step2').removeClass('is-hidden');
 			}
 			else {
-				step = "etap1stylRealistyczny";
+				step = "etap1stylCzynnosciowy";
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#finishButton').removeClass('is-hidden');
@@ -62,7 +62,7 @@ $(document).ready( function() {
 				$('#step2').removeClass('is-hidden');
 			}
 			else {
-				step = "etap1stylRealistyczny";
+				step = "etap1stylCzynnosciowy";
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#finishButton').removeClass('is-hidden');
@@ -81,13 +81,14 @@ $(document).ready( function() {
 			var secondNumber = input2.val();
 			
 			if (firstNumber==2 && secondNumber==3) {
+				step = 'etap3stylCzynnosciowy';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
-				$('#step3').removeClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap2stylRealistyczny';
+				step = 'etap2stylCzynnosciowy';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#finishButton').removeClass('is-hidden');
@@ -104,13 +105,14 @@ $(document).ready( function() {
 			var secondNumber = input2.val();
 			
 			if (firstNumber==2 && secondNumber==3) {
+				step = 'etap3stylCzynnosciowy';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
-				$('#step3').removeClass('is-hidden');
+				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap2stylRealistyczny';
+				step = 'etap2stylCzynnosciowy';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#finishButton').removeClass('is-hidden');
@@ -120,36 +122,8 @@ $(document).ready( function() {
     });
 
 	
-	
-	
-	
-	
-	
-	$('#step3input01').keyup(function(){
-		var resultInput = $(this);
-		var result = resultInput.val();
-		var firstNumber = 5;
-		var secondNumber = 0;
-		var idNumber = '02';
-		var listEntry = '<li><div class="operation"><div class="frame">'+firstNumber+'</div><div class="math-symbol">*</div><div class="frame">'+secondNumber+'</div><div class="math-symbol">=</div><input id="step3input'+idNumber+'"></div></li>'
-		
-		if (result==0) {
-			resultInput.addClass("correct disabled");
-			$("#multiplicationTable").append(listEntry);
-		}
-		else {
-			step = 'etap3stylRealistyczny';
-			resultInput.addClass("incorrect disabled");
-			resultInput.addClass("incorrect disabled");
-			$('#finishButton').removeClass('is-hidden');
-			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-		}
-		
-    });
-	
-
-	
 	$("#finishButton").click(function(){
+		console.log('keyword   '+step);
 		getScoByKeyword()
 		$('#finishMessage').removeClass('is-hidden');
 		$('#activeBody').addClass('is-hidden');

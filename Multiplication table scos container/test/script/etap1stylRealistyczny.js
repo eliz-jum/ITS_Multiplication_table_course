@@ -81,11 +81,8 @@ $(document).ready( function() {
 			
 			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
 				step = 'etap2stylRealistyczny';
-				//input1.removeClass("incorrect");
-				//input2.removeClass("incorrect");
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
-				//$('#errorMessage3').addClass('is-hidden');
 				$('#congratMessage3').removeClass('is-hidden');
 				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -111,11 +108,8 @@ $(document).ready( function() {
 			
 			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
 				step = 'etap2stylRealistyczny';
-				//input1.removeClass("incorrect");
-				//input2.removeClass("incorrect");
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
-				//$('#errorMessage3').addClass('is-hidden');
 				$('#congratMessage3').removeClass('is-hidden');
 				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
