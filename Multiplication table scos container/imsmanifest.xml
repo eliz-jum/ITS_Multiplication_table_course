@@ -173,6 +173,7 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="global/APIWrapper.js" />
 			<file href="global/SCORMTestWrapper.js" />
 			<file href="global/jquery-3.3.1.min.js" />
+			<file href="global/jquery-ui-1.12.js" />
 			<file href="img/bgOpacity50.png" />
 		</resource>
 	
