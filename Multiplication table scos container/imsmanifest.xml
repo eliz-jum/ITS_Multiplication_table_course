@@ -212,8 +212,11 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="etap1stylCzynnosciowy.html" />
 			<file href="script/etap1stylCzynnosciowy.js" />
 			<file href="style/etap1stylCzynnosciowy.css" />
-			<file href="img/etap1realistyczny.png" />
-			<file href="img/etap1realistyczny2.png" />
+			<file href="img/basketLeft.png" />
+			<file href="img/basketLeftWithMushroom.png" />
+			<file href="img/basketRight.png" />
+			<file href="img/basketRightWithMushroom.png" />
+			<file href="img/mushroom.png" />
 			<dependency identifierref="globalAssests" />
 		</resource>
 		

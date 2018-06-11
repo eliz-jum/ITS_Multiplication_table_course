@@ -3,7 +3,7 @@
 $(document).ready( function() {
 		
 	var step;
-	
+	var draggableItemsCount = 0;
 	
 		
 	$('input').keydown(function (e) {
@@ -26,29 +26,49 @@ $(document).ready( function() {
         }
     });
 	
+	
+	 $( function() {
+		$( ".draggable-img" ).draggable();
+		$( ".droppable-img" ).droppable({
+			drop: function( event, ui ) {
+				draggableItemsCount++;
+				var thisItem = $( this );
+				thisItem.addClass( 'is-hidden' );
+				thisItem.next().removeClass( 'is-hidden' );
+				$(ui.draggable).addClass( 'is-hidden' );
+				if (draggableItemsCount == 6) {
+					$('#congratMessage0').removeClass('is-hidden');
+					$('#zad1part1').removeClass('is-hidden');
+					$('#draggableImgFirst').addClass('is-hidden');
+				}
+			}
+		});
+		
+	} );
+	
+	
 	$('#zad1input1').keyup(function(){
 		var input = $(this);
 		var number = input.val();
 		
-		if ( number==8 ) {
+		if ( number==6 ) {
 			input.removeClass("incorrect");
 			input.addClass("correct disabled");
-			$('#congratMessage1').removeClass('is-hidden');
 			$('#errorMessage1').addClass('is-hidden');
 			$('#zad1part2').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		}
 		else {
 			input.addClass("incorrect");
 			$('#errorMessage1').removeClass('is-hidden');
 		}
-		
     });
 	
 	$('#zad1input2').keyup(function(){
 		var input = $(this);
 		var number = input.val();
 		
-		if ( number==4 ) {
+		if ( number==3 ) {
 			input.removeClass("incorrect");
 			input.addClass("correct disabled");
 			$('#congratMessage2').removeClass('is-hidden');
@@ -61,7 +81,6 @@ $(document).ready( function() {
 			input.addClass("incorrect");
 			$('#errorMessage2').removeClass('is-hidden');
 		}
-		
     });	
 	
 	$("#nextButton").click(function(){

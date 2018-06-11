@@ -6,11 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>etap1wyborStylu</title>
 	
-	<link rel="stylesheet" href="style/etap1stylIntegranly.css" type="text/css">	
+	<link rel="stylesheet" href="style/etap1stylCzynnosciowy.css" type="text/css">	
 	<script src="global/APIWrapper.js"></script>
 	<script src="global/SCORMTestWrapper.js"></script>
 	<script src="global/jquery-3.3.1.min.js"></script>
-	<script src="script/etap1stylIntegranly.js"></script>	
+	<script src="global/jquery-ui-1.12.js"></script>
+	<script src="script/etap1stylCzynnosciowy.js"></script>	
 
 
 </head>
@@ -19,7 +20,7 @@
 	<div class="transparent-container">
 		<div id="activeBody">
 			<div class="header">
-				<h1>Tłumaczenie czym jest mnożenie - styl integralny</h1>
+				<h1>Tłumaczenie czym jest mnożenie - styl czynnościowy</h1>
 			</div>
 
 			<div id="zad1" class="step-task-container">
@@ -27,47 +28,70 @@
 					<h2>Zadanie 1</h2>
 				</div>
 				<div class="content">
-					<h3>Na urodziny Ali przyszły 4 osoby. Każdy przyniósł po dwa prezenty.</h3>
-					<div class="img-tall">
-						<img src="img/etap1realistyczny.png">
-						<img src="img/etap1realistyczny.png">
-						<img src="img/etap1realistyczny.png">
-						<img src="img/etap1realistyczny.png">
+					<h3>3 przyjaciół wybrało sie na grzyby. Każdy zebrał po 2 grzyby</h3>
+					<h3>Włóz po dwa grzyby do kadego koszyka.</h3>
+					<div class="img-short">
+							<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
+							<img src="img/basketLeftWithMushroom.png" class="is-hidden">
+							<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
+							<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
+							
+							<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
+							<img src="img/basketLeftWithMushroom.png" class="is-hidden">
+							<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
+							<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
+							
+							<img src="img/basketLeft.png" class="droppable-img ui-widget-header">
+							<img src="img/basketLeftWithMushroom.png" class="is-hidden">
+							<img src="img/basketRight.png" class="droppable-img img-right-part ui-widget-header">
+							<img src="img/basketRightWithMushroom.png" class="is-hidden img-right-part">
 					</div>
-					<h3>Dodaj wszystkie prezenty.</h3>
-					<div id="operation" class="operation">
-						<div class="frame">2</div>
-						<div class="math-symbol">+</div>
-						<div class="frame">2</div>
-						<div class="math-symbol">+</div>
-						<div class="frame">2</div>
-						<div class="math-symbol">+</div>
-						<div class="frame">2</div>
-						<div class="math-symbol">=</div>
-						<input id="zad1input1">
+					<div class="draggable-img-container">
+						<img src="img/mushroom.png" id="draggableImgFirst" class="draggable-img-first ui-widget-content">
+						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
+						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
+						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
+						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
+						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
+						<img src="img/mushroom.png" class="draggable-img ui-widget-content">
 					</div>
-					<div class="error-message is-hidden" id="errorMessage1">Policz dokładnie</div>
-					<div class="congratulations-message is-hidden" id="congratMessage1">Wspaniale!</div>
 					
+					<div class="congratulations-message is-hidden" id="congratMessage0">Wspaniale!</div>
+					
+					<div id="zad1part1"  class="is-hidden">
+						<h3>Ile zebrano grzybów?</h3>
+						<div id="operation" class="operation">
+							<div class="frame">2</div>
+							<div class="math-symbol">+</div>
+							<div class="frame">2</div>
+							<div class="math-symbol">+</div>
+							<div class="frame">2</div>
+							<div class="math-symbol">=</div>
+							<input id="zad1input1">
+						</div>
+						<div class="error-message is-hidden" id="errorMessage1">Policz dokładnie</div>
+						<div class="congratulations-message is-hidden" id="congratMessage">Wspaniale!</div>
+					</div>
+						
 					<div id="zad1part2"  class="is-hidden">
 						<h3>Ile jest dwójek?</h3>
 						<input id="zad1input2">
-						<div class="error-message is-hidden" id="errorMessage2">Dwójek jest tyle samo ilu przyszło gości</div>
+						<div class="error-message is-hidden" id="errorMessage2">Dwójek jest tyle samo ilu przyjaciół poszło na grzyby.</div>
 						<div class="congratulations-message is-hidden" id="congratMessage2">Wspaniale!</div>
 					</div>
 					
 					<div id="zad1part3"  class="is-hidden">
-						<h3>Mamy cztery dwójki. To oznacza mnożenie:</h3>
+						<h3>Mamy trzy dwójki. To oznacza mnożenie:</h3>
 						<div id="operation" class="operation">
-							<div class="frame significant-1">4</div>
+							<div class="frame significant-1">3</div>
 							<div class="math-symbol">*</div>
 							<div class="frame significant-2">2</div>
 						</div>
 						<h3>
-							<span class="significant-1">4</span>
-							gości, każdy przyniusł po
+							<span class="significant-1">3</span>
+							przyjaciół, każdy zebrał po
 							<span class="significant-2">2</span>
-							prezenty.
+							grzyby.
 						</h3>
 					</div>
 				</div>
