@@ -79,8 +79,8 @@ $(document).ready( function() {
 			var firstNumber = input1.val();
 			var secondNumber = input2.val();
 			
-			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
-				step = 'etap2stylRealistyczny';
+			if ((firstNumber==7 && secondNumber==5) || (firstNumber==5 && secondNumber==7)) {
+				step = 'etap2stylIntegralny';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
@@ -88,7 +88,7 @@ $(document).ready( function() {
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap1stylIntegralny';
+				//step = 'etap1stylCzynnosciowy';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
@@ -106,8 +106,8 @@ $(document).ready( function() {
 			var firstNumber = input1.val();
 			var secondNumber = input2.val();
 			
-			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
-				step = 'etap2stylRealistyczny';
+			if ((firstNumber==7 && secondNumber==5) || (firstNumber==5 && secondNumber==7)) {
+				step = 'etap2stylIntegralny';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
@@ -115,7 +115,7 @@ $(document).ready( function() {
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap1stylIntegralny';
+				//step = 'etap1stylCzynnosciowy';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
