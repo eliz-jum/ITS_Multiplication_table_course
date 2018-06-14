@@ -30,12 +30,13 @@ $(document).ready( function() {
 		var input = $(this);
 		var number = input.val();
 		
-		if ( number==8 ) {
+		if ( number==27 ) {
 			input.removeClass("incorrect");
 			input.addClass("correct disabled");
 			$('#congratMessage1').removeClass('is-hidden');
 			$('#errorMessage1').addClass('is-hidden');
 			$('#zad1part2').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		}
 		else {
 			input.addClass("incorrect");
@@ -48,7 +49,7 @@ $(document).ready( function() {
 		var input = $(this);
 		var number = input.val();
 		
-		if ( number==4 ) {
+		if ( number==3 ) {
 			input.removeClass("incorrect");
 			input.addClass("correct disabled");
 			$('#congratMessage2').removeClass('is-hidden');
@@ -71,7 +72,6 @@ $(document).ready( function() {
 	});
 
 	$('#zad2input1').keyup(function(){
-		console.log('hi');
 		if ($('#zad2input2').val()) {
 			var input1 = $(this);
 			var input2 = $('#zad2input2');
@@ -81,17 +81,14 @@ $(document).ready( function() {
 			
 			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
 				step = 'etap2stylRealistyczny';
-				input1.removeClass("incorrect");
-				input2.removeClass("incorrect");
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
-				$('#errorMessage3').addClass('is-hidden');
 				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap2stylIntegranly';
+				step = 'etap1stylIntegralny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
@@ -111,17 +108,14 @@ $(document).ready( function() {
 			
 			if ((firstNumber==3 && secondNumber==5) || (firstNumber==5 && secondNumber==3)) {
 				step = 'etap2stylRealistyczny';
-				input1.removeClass("incorrect");
-				input2.removeClass("incorrect");
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
-				$('#errorMessage3').addClass('is-hidden');
 				$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap2stylIntegranly';
+				step = 'etap1stylIntegralny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
