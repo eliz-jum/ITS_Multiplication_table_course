@@ -3,7 +3,8 @@
 $(document).ready( function() {
 		
 	var step;
-	
+	var draggableItemsCount = 0;
+	var draggableItemsCount2 = 0;
 	
 		
 	$('input').keydown(function (e) {
@@ -26,6 +27,25 @@ $(document).ready( function() {
         }
     });
 	
+	$( function() {
+		$( ".draggable-img" ).draggable();
+		$( ".droppable-img" ).droppable({
+			drop: function( event, ui ) {
+				draggableItemsCount++;
+				console.log(draggableItemsCount);
+				var thisItem = $( this );
+				thisItem.addClass( 'is-hidden' );
+				thisItem.next().removeClass( 'is-hidden' );
+				$(ui.draggable).addClass( 'is-hidden' );
+				if (draggableItemsCount == 6) {
+					$('#draggableImgFirst').addClass('is-hidden');
+					$('#zad1part1').removeClass('is-hidden');
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				}
+			}
+		});
+	} );	
+	
 	$('#zad1input1').keyup(function(){
 		var input = $(this);
 		var number = input.val();
@@ -43,6 +63,25 @@ $(document).ready( function() {
 		}
     });
 	
+	$( function() {
+		$( ".draggable-img2" ).draggable();
+		$( ".droppable-img2" ).droppable({
+			drop: function( event, ui ) {
+				draggableItemsCount2++;
+				console.log(draggableItemsCount2);
+				var thisItem = $( this );
+				thisItem.addClass( 'is-hidden' );
+				thisItem.next().removeClass( 'is-hidden' );
+				$(ui.draggable).addClass( 'is-hidden' );
+				if (draggableItemsCount2 == 6) {
+					$('#draggableImgFirst2').addClass('is-hidden');
+					$('#zad1part3').removeClass('is-hidden');
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				}
+			}
+		});
+	} );		
+	
 	$('#zad1input2').keyup(function(){
 		var input = $(this);
 		var number = input.val();
@@ -52,7 +91,7 @@ $(document).ready( function() {
 			input.addClass("correct disabled");
 			$('#congratMessage2').removeClass('is-hidden');
 			$('#errorMessage2').addClass('is-hidden');
-			$('#zad1part3').removeClass('is-hidden');
+			$('#zad1part4').removeClass('is-hidden');
 			$('#nextButtonDiv').removeClass('is-hidden');
 			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		}
@@ -77,8 +116,8 @@ $(document).ready( function() {
 			var firstNumber = input1.val();
 			var secondNumber = input2.val();
 			
-			if (firstNumber==4 && secondNumber==6) {
-				step = 'etap3stylIntegralny';
+			if (firstNumber==4 && secondNumber==7) {
+				step = 'etap3stylCzynnosciowy';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
@@ -87,7 +126,7 @@ $(document).ready( function() {
 			}
 			else {
 				//if byl juz w integralny to koniec
-				step = 'etap2stylCzynnosciowy';
+				step = 'etap2stylRealistyczny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
@@ -105,8 +144,8 @@ $(document).ready( function() {
 			var firstNumber = input1.val();
 			var secondNumber = input2.val();
 			
-			if (firstNumber==4 && secondNumber==6) {
-				step = 'etap3stylIntegralny';
+			if (firstNumber==4 && secondNumber==7) {
+				step = 'etap3stylCzynnosciowy';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
@@ -114,7 +153,7 @@ $(document).ready( function() {
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap2stylCzynnosciowy';
+				step = 'etap2stylRealistyczny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
