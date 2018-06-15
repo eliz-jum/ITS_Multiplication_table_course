@@ -34,7 +34,10 @@ body {
 
 .transparent-container {
 	padding: 30px 50px;
-	
+}
+
+.task-part-container {
+	margin-top: 40px;
 }
 
 .error-message {
@@ -60,7 +63,7 @@ body {
 
 .img-short img {
 	width: 250px;
-	
+	margin-right: 5px;
 }
 
 .vertical {

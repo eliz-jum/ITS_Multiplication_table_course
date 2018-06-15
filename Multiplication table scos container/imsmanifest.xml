@@ -132,6 +132,31 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 				</imsss:sequencing>
 			</item>
 			
+			<item identifier="etap2stylIntegralny1" identifierref="etap2stylIntegralny" isvisible="true">
+				<title>Tlumaczenie przemiennosci mnozenia - styl integralny</title>
+				<metadata> 
+					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
+						<general> 
+							<keyword> 
+								<string language="en">etap2stylIntegralny:1:AWN</string> 
+							</keyword>  
+						</general>  
+					</lom> 
+				</metadata> 
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
+			
 			
 			<item identifier="etap1stylCzynnosciowy1" identifierref="etap1stylCzynnosciowy" isvisible="true">
 				<title>Tlumaczenie czym jest mnozenie - styl czynnosciowy</title>
@@ -190,8 +215,8 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="etap2stylRealistyczny.html" />
 			<file href="script/etap2stylRealistyczny.js" />
 			<file href="style/etap2stylRealistyczny.css" />
-			<img src="img/presents2.png">
-			<img src="img/presents3.png">
+			<file href="img/presents2.png" />
+			<file href="img/presents3.png" />
 			<dependency identifierref="globalAssests" />
 		</resource>
 		
@@ -210,6 +235,13 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="img/stegozaurRight.jpg"/>
 			<file href="img/arrow.png"/>
 			<file href="img/lion.jpg"/>
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+		<resource identifier="etap2stylIntegralny" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap2stylIntegralny.html">
+			<file href="etap2stylIntegralny.html" />
+			<file href="script/etap2stylIntegralny.js" />
+			<file href="style/etap2stylIntegralny.css" />
 			<dependency identifierref="globalAssests" />
 		</resource>
 		

@@ -77,8 +77,8 @@ $(document).ready( function() {
 			var firstNumber = input1.val();
 			var secondNumber = input2.val();
 			
-			if (firstNumber==4 && secondNumber==6) {
-				step = 'etap3stylRealistyczny';
+			if (firstNumber==5 && secondNumber==7) {
+				step = 'etap3stylIntegralny';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
@@ -87,7 +87,7 @@ $(document).ready( function() {
 			}
 			else {
 				//if byl juz w integralny to koniec
-				step = 'etap2stylIntegralny';
+				step = 'etap2stylCzynnosciowy';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
@@ -105,8 +105,8 @@ $(document).ready( function() {
 			var firstNumber = input1.val();
 			var secondNumber = input2.val();
 			
-			if (firstNumber==4 && secondNumber==6) {
-				step = 'etap3stylRealistyczny';
+			if (firstNumber==5 && secondNumber==7) {
+				step = 'etap3stylCzynnosciowy';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
@@ -114,7 +114,7 @@ $(document).ready( function() {
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 			else {
-				step = 'etap1stylIntegralny';
+				step = 'etap2stylIntegralny';
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
