@@ -190,6 +190,8 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="etap2stylRealistyczny.html" />
 			<file href="script/etap2stylRealistyczny.js" />
 			<file href="style/etap2stylRealistyczny.css" />
+			<img src="img/presents2.png">
+			<img src="img/presents3.png">
 			<dependency identifierref="globalAssests" />
 		</resource>
 		
@@ -204,10 +206,10 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<file href="etap1stylIntegralny.html" />
 			<file href="script/etap1stylIntegralny.js" />
 			<file href="style/etap1stylIntegralny.css" />
-			<file href="img/stegozaurLeft.jpg">
-			<file href="img/stegozaurRight.jpg">
-			<file href="img/arrow.png">
-			<file href="img/lion.jpg">
+			<file href="img/stegozaurLeft.jpg"/>
+			<file href="img/stegozaurRight.jpg"/>
+			<file href="img/arrow.png"/>
+			<file href="img/lion.jpg"/>
 			<dependency identifierref="globalAssests" />
 		</resource>
 		

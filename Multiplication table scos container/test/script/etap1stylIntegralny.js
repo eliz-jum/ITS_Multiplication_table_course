@@ -29,20 +29,20 @@ $(document).ready( function() {
 	$('#zad1input1').keyup(function(){
 		var input = $(this);
 		var number = input.val();
-		
-		if ( number==27 ) {
-			input.removeClass("incorrect");
-			input.addClass("correct disabled");
-			$('#congratMessage1').removeClass('is-hidden');
-			$('#errorMessage1').addClass('is-hidden');
-			$('#zad1part2').removeClass('is-hidden');
-			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-		}
-		else {
-			input.addClass("incorrect");
-			$('#errorMessage1').removeClass('is-hidden');
-		}
-		
+		if (number.toString().length==2) {
+			if ( number==27 ) {
+				input.removeClass("incorrect");
+				input.addClass("correct disabled");
+				$('#congratMessage1').removeClass('is-hidden');
+				$('#errorMessage1').addClass('is-hidden');
+				$('#zad1part2').removeClass('is-hidden');
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			}
+			else {
+				input.addClass("incorrect");
+				$('#errorMessage1').removeClass('is-hidden');
+			}
+		}	
     });
 	
 	$('#zad1input2').keyup(function(){
@@ -92,7 +92,7 @@ $(document).ready( function() {
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
+				//$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		}
@@ -119,7 +119,7 @@ $(document).ready( function() {
 				input1.addClass("incorrect disabled");
 				input2.addClass("incorrect disabled");
 				$('#errorMessage3').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
+				//$('#finishButton').removeClass('is-hidden');
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		}
@@ -128,7 +128,6 @@ $(document).ready( function() {
 
 	
 	$("#finishButton").click(function(){
-		console.log('finish');
 		getScoByKeyword()
 		$('#finishMessage').removeClass('is-hidden');
 		$('#activeBody').addClass('is-hidden');
