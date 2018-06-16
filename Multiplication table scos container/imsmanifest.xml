@@ -57,7 +57,7 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			</item>
 			
 			<item identifier="etap2stylRealistyczny1" identifierref="etap2stylRealistyczny" isvisible="true">
-				<title>Tlumaczenie przemiennosci mnozenia - styl realistyczny</title>
+				<title>Przemiennosc mnozenia - styl realistyczny</title>
 				<metadata> 
 					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
 						<general> 
@@ -108,7 +108,7 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			</item>
 			
 			<item identifier="etap2stylIntegralny1" identifierref="etap2stylIntegralny" isvisible="true">
-				<title>Tlumaczenie przemiennosci mnozenia - styl integralny</title>
+				<title>Przemiennosc mnozenia - styl integralny</title>
 				<metadata> 
 					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
 						<general> 
@@ -159,7 +159,7 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			</item>
 			
 			<item identifier="etap2stylCzynnosciowy1" identifierref="etap2stylCzynnosciowy" isvisible="true">
-				<title>Tlumaczenie przemiennosci mnozenia - styl czynnosciowy</title>
+				<title>Przemiennosc mnozenia - styl czynnosciowy</title>
 				<metadata> 
 					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
 						<general> 
@@ -210,7 +210,7 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			</item>
 			
 			<item identifier="etap311" identifierref="etap31" isvisible="true">
-				<title>Utrwalanie mnozenia 0</title>
+				<title>Utrwalanie mnozenia 1</title>
 				<metadata> 
 					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
 						<general> 
@@ -327,7 +327,7 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<dependency identifierref="globalAssests" />
 		</resource>
 		
-		<resource identifier="etap31" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap30.html">
+		<resource identifier="etap31" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap31.html">
 			<file href="etap31.html" />
 			<file href="script/etap31.js" />
 			<file href="style/etap3.css" />
