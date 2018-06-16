@@ -1,26 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>etap3wyborStylu</title>
+	<meta charset="utf-8"> 
+	<title>etap2wyborStylu</title>
 
 	<link rel="stylesheet" href="style/etap3stylRealistyczny.css" type="text/css">
 	<script src="global/APIWrapper.js"></script>
 	<script src="global/SCORMTestWrapper.js"></script>
-	<script src="global/jquery-3.3.1.min.js"></script>		
+	<script src="global/jquery-3.3.1.min.js"></script>	
 	<script src="script/etap3stylRealistyczny.js"></script>	
-
-
 </head>
 
-<body onload="init();" onunload="terminate();">
-	<div id="message">
-		Etap 3 test na wybor stylu
-		<button id="myButton">click me</button>
+<body>
+	<div class="transparent-container">
+		<div id="activeBody">
+			<div class="header">
+				<h1>Tłumaczenie przemienności mnożenia - styl realistyczny</h1>
+			</div>
+
+			<div id="zad1" class="step-task-container">
+				<div class="title">
+					<h2>Zadanie 1</h2>
+				</div>
+				<div class="content">
+					<h3>Na urodziny Ali przyszły 3 osoby. Każdy przyniósł po 2 prezenty.</h3>
+					<div class="img-tall">
+						<img src="img/presents2.png">
+						<img src="img/presents2.png">
+						<img src="img/presents2.png">
+					</div>
+					<h3>Ile Ala dostała prezentów prezentów?</h3>
+					<div id="operation" class="operation">
+						<div class="frame">3</div>
+						<div class="math-symbol">*</div>
+						<div class="frame">2</div>
+						<div class="math-symbol">=</div>
+						<input id="zad1input1">
+					</div>
+					<div class="error-message is-hidden" id="errorMessage1">Policz dokładnie</div>
+					<div class="congratulations-message is-hidden" id="congratMessage1">Wspaniale!</div>
+					
+					<div id="zad1part2"  class="is-hidden task-part-container">
+						<h3>Na urodziny Magdy przyszły tylko 2 osoby, ale każdy przyniósł aż po 3 prezenty.</h3>
+						<div class="img-tall">
+							<img src="img/presents3.png">
+							<img src="img/presents3.png">
+						</div>
+						<h3>Ile prezentów dostała Magda?</h3>
+						<div id="operation" class="operation">
+							<div class="frame">2</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">3</div>
+							<div class="math-symbol">=</div>
+							<input id="zad1input2">
+						</div>
+						<div class="error-message is-hidden" id="errorMessage2">Policz dokładnie</div>
+						<div class="congratulations-message is-hidden" id="congratMessage2">Wspaniale!</div>
+					</div>
+					
+					<div id="zad1part3"  class="is-hidden task-part-container">
+						<h3>Ala i Magda dostały tyle samo prezentów.</h3>
+						<div id="operation" class="operation">
+							<div class="frame significant-1">3</div>
+							<div class="math-symbol">*</div>
+							<div class="frame significant-2">2</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">6</div>
+						</div>
+						<div id="operation" class="operation">
+							<div class="frame significant-2">2</div>
+							<div class="math-symbol">*</div>
+							<div class="frame significant-1">3</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">6</div>
+						</div>
+						<h3>Stało się tak, ponieważ mnożenie jest przemienne.</h3>
+						<h3>Oznacza to, że nawet jeśli odwrócimy kolejność liczb, wynik pozostanie taki sam:</h3>
+						<div id="operation" class="operation">
+							<div class="frame significant-1">3</div>
+							<div class="math-symbol">*</div>
+							<div class="frame significant-2">2</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">6</div>
+							<div class="math-symbol">=</div>
+							<div class="frame significant-2">2</div>
+							<div class="math-symbol">*</div>
+							<div class="frame significant-1">3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="nextButtonDiv" class="is-hidden next-button">
+				<button id="nextButton">dalej</button>
+			</div>
+			
+			<div id="zad2" class="step-task-container is-hidden">
+				<div class="title">
+					<h2>Zadanie 2</h2>
+				</div>
+				<div class="content">
+					<h3>Odwróć kolejnośc liczb, tak, aby wynik się nie zmienił</h3>
+					<div id="operation" class="operation">
+						<div class="frame">6</div>
+						<div class="math-symbol">*</div>
+						<div class="frame">4</div>
+						<div class="math-symbol">=</div>
+						<div class="frame">24</div>
+						<div class="math-symbol">=</div>
+						<input id="zad2input1">
+						<div class="math-symbol">*</div>
+						<input id="zad2input2">
+					</div>
+					<div class="error-message is-hidden" id="errorMessage3">Niestety to nie jest prawidłowa odpowiedź. Kliknij KONIC, a dostaniesz kolejną szansę z innym zadaniem.</div>
+					<div class="congratulations-message is-hidden" id="congratMessage3">Wspaniale!</div>
+					
+				</div>
+			</div>
+
+			<div id="finishButton" class="is-hidden">
+				<button id="finshButton">koniec</button>
+			</div>
+		</div>
+		
+		<div id="finishMessage" class="is-hidden">
+			<h1>Poczekaj, aż nauczyciel zaakceptuje dalszą częsć kursu</h1>
+		</div>
 	</div>
-	
-	
-	
 
 </body>
 </html>

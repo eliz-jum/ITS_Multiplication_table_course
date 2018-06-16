@@ -81,13 +81,13 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 				</imsss:sequencing>
 			</item>
 			
-			<item identifier="etap3stylRealistyczny1" identifierref="etap3stylRealistyczny" isvisible="true">
+			<item identifier="etap3stylRealistyczny01" identifierref="etap3stylRealistyczny0" isvisible="true">
 				<title>Utrwalanie mnozenia - styl realistyczny</title>
 				<metadata> 
 					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
 						<general> 
 							<keyword> 
-								<string language="en">etap3stylRealistyczny:1:AWN</string> 
+								<string language="en">etap3stylRealistyczny0:1:AWN</string> 
 							</keyword>  
 						</general>  
 					</lom> 
