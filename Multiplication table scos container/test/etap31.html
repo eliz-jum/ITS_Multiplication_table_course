@@ -2,65 +2,65 @@
 <html>
 <head>
 	<meta charset="utf-8"> 
-	<title>etap30</title>
+	<title>etap31</title>
 
 	<link rel="stylesheet" href="style/etap3.css" type="text/css">
 	<script src="global/APIWrapper.js"></script>
 	<script src="global/SCORMTestWrapper.js"></script>
 	<script src="global/jquery-3.3.1.min.js"></script>	
-	<script src="script/etap30.js"></script>	
+	<script src="script/etap31.js"></script>	
 </head>
 
 <body>
 	<div class="transparent-container">
 		<div id="activeBody">
 			<div class="header">
-				<h1>Utrwalanie mnożenia 0</h1>
+				<h1>Utrwalanie mnożenia 1</h1>
 			</div>
 
 			<div id="zad1" class="step-task-container">
 				<div class="title">
-					<h2>Mnożenie przez 0</h2>
+					<h2>Mnożenie przez 1</h2>
 				</div>
 				<div class="content">
 					<div id="operation" class="operation">
-						<div class="frame">0</div>
+						<div class="frame">1</div>
 						<div class="math-symbol">*</div>
 						<div class="frame">1</div>
 						<div class="math-symbol">=</div>
-						<div class="frame">0</div>
+						<div class="frame">1</div>
 					</div>
 					<div id="zad1part2"  class="is-hidden">
 						<div id="operation" class="operation">
-							<div class="frame">0</div>
+							<div class="frame">1</div>
 							<div class="math-symbol">*</div>
 							<div class="frame">2</div>
 							<div class="math-symbol">=</div>
-							<div class="frame">0</div>
+							<div class="frame">2</div>
 						</div>
 					</div>
 					<div id="zad1part3"  class="is-hidden">
 						<div id="operation" class="operation">
-							<div class="frame">0</div>
+							<div class="frame">1</div>
 							<div class="math-symbol">*</div>
 							<div class="frame">3</div>
 							<div class="math-symbol">=</div>
-							<div class="frame">0</div>
+							<div class="frame">3</div>
 						</div>
 					</div>
 					<div id="zad1part4"  class="is-hidden">
 						<div id="operation" class="operation">
-							<div class="frame">0</div>
+							<div class="frame">1</div>
 							<div class="math-symbol">*</div>
 							<div class="frame">4</div>
 							<div class="math-symbol">=</div>
-							<div class="frame">0</div>
+							<div class="frame">4</div>
 						</div>
 					</div>
 					<div id="zad1part5"  class="is-hidden">
-						<h3>Czy zauważyłeś, że wynik zawsze jest taki sam?</br>
-						Można to ciągnąć w nieskończoność, a wynik zawsze będzie się równał 0.</h3>
-						<h3><span class="significant-1">Wszystko pomnożone przez 0 daje wynik 0.</span></h3>
+						<h3>Czy zauważyłeś, że wynik zawsze jest taki sam jak druga liczba?</br>
+						Można to ciągnąć w nieskończoność, a wynik zawsze będzie się równał drugiej liczbie.</h3>
+						<h3><span class="significant-1">Jakąkolwiek liczbę pomnożymy przez 1 wynikiem będzie ta liczba.</span></h3>
 					</div>
 					
 					<div id="nextButtonDiv" class="next-button">
@@ -77,9 +77,9 @@
 					<h3>Napisz wyniki mnożenia:</h3>
 					<div id="zad2part1" >
 						<div id="operation" class="operation">
-							<div class="frame">0</div>
+							<div class="frame">1</div>
 							<div class="math-symbol">*</div>
-							<div class="frame">8</div>
+							<div class="frame">7</div>
 							<div class="math-symbol">=</div>
 							<input id="zad2input1" class="zad2-input">
 						</div>
@@ -90,29 +90,29 @@
 						<div id="operation" class="operation">
 							<div class="frame">3</div>
 							<div class="math-symbol">*</div>
-							<div class="frame">0</div>
+							<div class="frame">1</div>
 							<div class="math-symbol">=</div>
 							<input id="zad2input2" class="zad2-input">
 						</div>
 						<div class="error-message is-hidden" id="errorMessage2">Zobacz, co jest napisane na górze, na różowo.</div>
 					</div>
 					
-					<div id="zad1part3"  class="is-hidden">
+					<div id="zad2part3"  class="is-hidden">
 						<div id="operation" class="operation">
-							<div class="frame">10</div>
+							<div class="frame">9</div>
 							<div class="math-symbol">*</div>
-							<div class="frame">0</div>
+							<div class="frame">1</div>
 							<div class="math-symbol">=</div>
 							<input id="zad2input3" class="zad2-input">
 						</div>
 						<div class="error-message is-hidden" id="errorMessage3">Zobacz, co jest napisane na górze, na różowo.</div>
 					</div>
 					
-					<div id="zad1part4"  class="is-hidden">
+					<div id="zad2part4"  class="is-hidden">
 						<div id="operation" class="operation">
-							<div class="frame">0</div>
+							<div class="frame">1</div>
 							<div class="math-symbol">*</div>
-							<div class="frame">7</div>
+							<div class="frame">5</div>
 							<div class="math-symbol">=</div>
 							<input id="zad2input4" class="zad2-input">
 						</div>
@@ -120,12 +120,30 @@
 					</div>
 					
 					<div class="congratulations-message is-hidden" id="congratMessage4">Wspaniale!</div>
-					
 				</div>
 			</div>
 
+			<div id="zad3" class="step-task-container is-hidden">
+				<div class="title">
+					<h2>Przypomnienie poprzednich liczb</h2>
+				</div>
+				<div class="content">
+					<h3>Pamiętasz jak było z mnożeniem przez 0?</h3>
+					<div id="operation" class="operation">
+						<div class="frame">0</div>
+						<div class="math-symbol">*</div>
+						<div class="frame">7</div>
+						<div class="math-symbol">=</div>
+						<input id="zad3input1" class="zad2-input">
+					</div>
+					<div class="error-message is-hidden" id="errorMessage5">Niestety to nie jest prawidłowa odpowiedź. Musisz cofnąć się do mnożenia przez 0.</div>
+					<div class="congratulations-message is-hidden" id="congratMessage5">Wspaniale!</div>
+				</div>
+			</div>
+
+			
 			<div id="finishButton" class="is-hidden">
-				<button id="finshButton">dalej</button>
+				<button id="finshButton">koniec</button>
 			</div>
 		</div>
 		

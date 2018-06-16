@@ -40,12 +40,96 @@ $(document).ready( function() {
 		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 	});
 	
-	$('.zad2-input').keyup(function(){
+	$('#zad2input1').keyup(function(){
 		var input = $(this);
-		var errorMessage = input.parent().next();
-		var nextTaskPart = input.parent().parent().next();
+		var number = input.val();
+		if ( number==7 ) {
+			input.removeClass("incorrect");
+			input.addClass("correct disabled");
+			$('#errorMessage1').addClass('is-hidden');
+			$('#zad2part2').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		}
+		else {
+			input.addClass("incorrect");
+			$('#errorMessage1').removeClass('is-hidden');
+		}
+    });
+	
+	$('#zad2input2').keyup(function(){
+		var input = $(this);
+		var number = input.val();
+		if ( number==3 ) {
+			input.removeClass("incorrect");
+			input.addClass("correct disabled");
+			$('#errorMessage2').addClass('is-hidden');
+			$('#zad2part3').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		}
+		else {
+			input.addClass("incorrect");
+			$('#errorMessage2').removeClass('is-hidden');
+		}
+    });	
+	
+	$('#zad2input3').keyup(function(){
+		var input = $(this);
+		var number = input.val();
+		if ( number==9 ) {
+			input.removeClass("incorrect");
+			input.addClass("correct disabled");
+			$('#errorMessage3').addClass('is-hidden');
+			$('#zad2part4').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		}
+		else {
+			input.addClass("incorrect");
+			$('#errorMessage3').removeClass('is-hidden');
+		}
+    });	
+	
+	$('#zad2input4').keyup(function(){
+		var input = $(this);
+		var number = input.val();
+		if ( number==5 ) {
+			input.removeClass("incorrect");
+			input.addClass("correct disabled");
+			$('#errorMessage4').addClass('is-hidden');
+			$('#congratMessage4').removeClass('is-hidden');
+			$('#zad3').removeClass('is-hidden');
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		}
+		else {
+			input.addClass("incorrect");
+			$('#errorMessage4').removeClass('is-hidden');
+		}
+    });	
+	
+	$('#zad3input1').keyup(function(){
+		var input = $(this);
 		var number = input.val();
 		if ( number.toString()=='0') {
+			console.log('hej 0');
+			step = 'etap32';
+			input.addClass("correct disabled");
+			$('#congratMessage5').removeClass('is-hidden');
+		}
+		else {
+			step = 'etap30';
+			input.addClass("incorrect disabled");
+			$('#errorMessage5').removeClass('is-hidden');
+		}
+		$("#finishButton").removeClass('is-hidden');
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    });
+	
+	
+	
+	
+	$('#zad2inp').keyup(function(){
+		var input = $(this);
+		var number = input.val();
+		if ( number==0 ) {
 			task2Part++;
 			if (task2Part<5) {
 				input.removeClass("incorrect");
@@ -55,9 +139,11 @@ $(document).ready( function() {
 			}
 			else {
 				step = 'etap31';
-				$('#congratMessage4').removeClass('is-hidden');
-				$("#finishButton").removeClass('is-hidden');
+				
+				
 			}
+			
+			
 			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		}
 		else {
@@ -65,6 +151,7 @@ $(document).ready( function() {
 			errorMessage.removeClass('is-hidden');
 		}
     });
+
 	
 	
 	
