@@ -81,13 +81,13 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 				</imsss:sequencing>
 			</item>
 			
-			<item identifier="etap3stylRealistyczny01" identifierref="etap3stylRealistyczny0" isvisible="true">
-				<title>Utrwalanie mnozenia - styl realistyczny</title>
+			<item identifier="etap301" identifierref="etap30" isvisible="true">
+				<title>Utrwalanie mnozenia 0</title>
 				<metadata> 
 					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
 						<general> 
 							<keyword> 
-								<string language="en">etap3stylRealistyczny0:1:AWN</string> 
+								<string language="en">etap30:1:AWN</string> 
 							</keyword>  
 						</general>  
 					</lom> 
@@ -245,10 +245,10 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<dependency identifierref="globalAssests" />
 		</resource>
 		
-		<resource identifier="etap3stylRealistyczny" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap3stylRealistyczny.html">
-			<file href="etap3stylRealistyczny.html" />
-			<file href="script/etap3stylRealistyczny.js" />
-			<file href="style/etap3stylRealistyczny.css" />
+		<resource identifier="etap30" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap30.html">
+			<file href="etap30.html" />
+			<file href="script/etap30.js" />
+			<file href="style/etap3.css" />
 			<dependency identifierref="globalAssests" />
 		</resource>
 		

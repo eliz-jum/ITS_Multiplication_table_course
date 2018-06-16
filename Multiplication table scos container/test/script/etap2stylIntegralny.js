@@ -78,7 +78,7 @@ $(document).ready( function() {
 			var secondNumber = input2.val();
 			
 			if (firstNumber==4 && secondNumber==6) {
-				step = 'etap3stylIntegralny';
+				step = 'etap30';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
@@ -106,7 +106,7 @@ $(document).ready( function() {
 			var secondNumber = input2.val();
 			
 			if (firstNumber==4 && secondNumber==6) {
-				step = 'etap3stylIntegralny';
+				step = 'etap30';
 				input1.addClass("correct disabled");
 				input2.addClass("correct disabled");
 				$('#congratMessage3').removeClass('is-hidden');
