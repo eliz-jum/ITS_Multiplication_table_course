@@ -3,7 +3,8 @@
 $(document).ready( function() {
 		
 	var step;
-	
+	var taskPart = 1;
+	var task2Part = 1;
 	
 		
 	$('input').keydown(function (e) {
@@ -26,103 +27,51 @@ $(document).ready( function() {
         }
     });
 	
-	$('#zad1input1').keyup(function(){
-		var input = $(this);
-		var number = input.val();
-		if ( number==6 ) {
-			input.removeClass("incorrect");
-			input.addClass("correct disabled");
-			$('#congratMessage1').removeClass('is-hidden');
-			$('#errorMessage1').addClass('is-hidden');
-			$('#zad1part2').removeClass('is-hidden');
-			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-		}
-		else {
-			input.addClass("incorrect");
-			$('#errorMessage1').removeClass('is-hidden');
-		}
-    });
-	
-	$('#zad1input2').keyup(function(){
-		var input = $(this);
-		var number = input.val();
-		
-		if ( number==6 ) {
-			input.removeClass("incorrect");
-			input.addClass("correct disabled");
-			$('#congratMessage2').removeClass('is-hidden');
-			$('#errorMessage2').addClass('is-hidden');
-			$('#zad1part3').removeClass('is-hidden');
-			$('#nextButtonDiv').removeClass('is-hidden');
-			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-		}
-		else {
-			input.addClass("incorrect");
-			$('#errorMessage2').removeClass('is-hidden');
-		}
-		
-    });	
-	
 	$("#nextButton").click(function(){
-		$('#zad2').removeClass('is-hidden');
-		$('#nextButton').addClass('disabled');
+		taskPart++;
+		var taskId = '#zad1part'+taskPart;
+		if (taskPart<6) {
+			$(taskId).removeClass('is-hidden');
+		}
+		else {
+			$('#zad2').removeClass('is-hidden');
+			$('#nextButton').addClass('is-hidden');
+		}
 		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 	});
-
-	$('#zad2input1').keyup(function(){
-		if ($('#zad2input2').val()) {
-			var input1 = $(this);
-			var input2 = $('#zad2input2');
-			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if (firstNumber==5 && secondNumber==7) {
-				step = 'etap3stylIntegralny';
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
-				$('#congratMessage3').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+	
+	$('.zad2-input').keyup(function(){
+		var input = $(this);
+		var errorMessage = input.parent().next();
+		var nextTaskPart = input.parent().parent().next();
+		var number = input.val();
+		if ( number==0 ) {
+			task2Part++;
+			if (task2Part<5) {
+				input.removeClass("incorrect");
+				input.addClass("correct disabled");
+				errorMessage.addClass('is-hidden');
+				nextTaskPart.removeClass('is-hidden');
 			}
 			else {
-				//if byl juz w integralny to koniec
-				step = 'etap2stylCzynnosciowy';
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
-				$('#errorMessage3').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				step = 'etap31';
+				$('#congratMessage4').removeClass('is-hidden');
+				$("#finishButton").removeClass('is-hidden');
 			}
+			
+			
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		}
+		else {
+			input.addClass("incorrect");
+			errorMessage.removeClass('is-hidden');
 		}
     });
 	
-	$('#zad2input2').keyup(function(){
-		if ($('#zad2input1').val()) {
-			var input1 = $('#zad2input1');
-			var input2 = $(this);
-			
-			var firstNumber = input1.val();
-			var secondNumber = input2.val();
-			
-			if (firstNumber==5 && secondNumber==7) {
-				step = 'etap3stylCzynnosciowy';
-				input1.addClass("correct disabled");
-				input2.addClass("correct disabled");
-				$('#congratMessage3').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-			else {
-				step = 'etap2stylIntegralny';
-				input1.addClass("incorrect disabled");
-				input2.addClass("incorrect disabled");
-				$('#errorMessage3').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-		}
-    });
+	
+	
+
+
 
 
 	
