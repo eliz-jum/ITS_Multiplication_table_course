@@ -80,6 +80,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 						<imsss:objective objectiveID="step2style3" satisfiedByMeasure="false">
 							<imsss:mapInfo targetObjectiveID="multiplicationTable.step2style3" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
+						<imsss:objective objectiveID="courseFailed" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.courseFailed" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>
 			</item>
@@ -107,6 +110,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 							<imsss:mapInfo targetObjectiveID="multiplicationTable.step1style3" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
 					</imsss:objectives>
+					<imsss:objective objectiveID="courseFailed" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.courseFailed" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
 				</imsss:sequencing>
 			</item>
 			
@@ -133,6 +139,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 						</imsss:objective>
 						<imsss:objective objectiveID="step2style1" satisfiedByMeasure="false">
 							<imsss:mapInfo targetObjectiveID="multiplicationTable.step2style1" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="courseFailed" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.courseFailed" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>
@@ -187,6 +196,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 						</imsss:objective>
 						<imsss:objective objectiveID="step2style2" satisfiedByMeasure="false">
 							<imsss:mapInfo targetObjectiveID="multiplicationTable.step2style2" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="courseFailed" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.courseFailed" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>

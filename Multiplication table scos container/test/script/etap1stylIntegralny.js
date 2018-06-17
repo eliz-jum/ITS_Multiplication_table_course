@@ -3,29 +3,28 @@
 $(document).ready( function() {
 		
 	var step;
-	var passed;
-	var objective;
+	var passed = getObjectiveStatus('courseFailed');
+	var objective = getObjectiveStatus('step1style3');
 	
-	getObjectives();
 	
-	function getObjectives() {
+	function getObjectiveStatus(objective) {
 		doInitialize();
 		var objectivesCount = doGetValue("cmi.objectives._count");
 		for (var i = 0; i < objectivesCount; i++) {
 			var idObjective = doGetValue("cmi.objectives." + i + ".id");
 			var status = "cmi.objectives." + i + ".success_status";
-			if (idObjective == "step1style3") {
-				objective = doGetValue(status);
+			if (idObjective == objective) {
+				return doGetValue(status);
 			}
 		}
 	}
 	
 	if (objective=='failed') {
-		if (passed){
-			$('#disabledMessage').removeClass('is-hidden');
+		if (passed=='failed'){
+			$('#disabledMessageFinal').removeClass('is-hidden');
 		}
 		else{
-			$('#disabledMessageFinal').removeClass('is-hidden');
+			$('#disabledMessage').removeClass('is-hidden');
 		}
 	}
 	else {
@@ -105,7 +104,7 @@ $(document).ready( function() {
 				var secondNumber = input2.val();
 				
 				if ((firstNumber==7 && secondNumber==5) || (firstNumber==5 && secondNumber==7)) {
-					passed = 1;
+					setObjectiveStatus('courseFailed', 1);
 					step = 'etap2stylIntegralny';
 					input1.addClass("correct disabled");
 					input2.addClass("correct disabled");
@@ -114,12 +113,12 @@ $(document).ready( function() {
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 				else {
-					passed = 0;
+					setObjectiveStatus('courseFailed', 0);
 					input1.addClass("incorrect disabled");
 					input2.addClass("incorrect disabled");
 					$('#errorMessage3').removeClass('is-hidden');
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-					setObjectivesStatusForSCO();
+					setObjectiveStatus('step1style3', 0);
 				}
 			}
 		});
@@ -132,7 +131,7 @@ $(document).ready( function() {
 				var secondNumber = input2.val();
 				
 				if ((firstNumber==7 && secondNumber==5) || (firstNumber==5 && secondNumber==7)) {
-					passed = 1;
+					setObjectiveStatus('courseFailed', 1);
 					step = 'etap2stylIntegralny';
 					input1.addClass("correct disabled");
 					input2.addClass("correct disabled");
@@ -141,12 +140,12 @@ $(document).ready( function() {
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 				else {
-					passed = 0;
+					setObjectiveStatus('courseFailed', 0);
 					input1.addClass("incorrect disabled");
 					input2.addClass("incorrect disabled");
 					$('#errorMessage3').removeClass('is-hidden');
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-					setObjectivesStatusForSCO();
+					setObjectiveStatus('step1style3', 0);
 				}
 			}
 		});
@@ -158,7 +157,7 @@ $(document).ready( function() {
 			getScoByKeyword()
 			$('#finishMessage').removeClass('is-hidden');
 			$('#activeBody').addClass('is-hidden');
-			setObjectivesStatusForSCO();
+			setObjectiveStatus('step1style3', 0);
 		});
 		
 		
@@ -184,7 +183,7 @@ $(document).ready( function() {
 		}		
 			
 				
-		function setObjectivesStatusForSCO() {
+		function setObjectiveStatus (objectiveName, statusPassed) {
 			var objectivesCount = doGetValue("cmi.objectives._count");
 			for (var i = 0; i < objectivesCount; i++) {
 				var idObjective = doGetValue("cmi.objectives." + i + ".id");
@@ -192,10 +191,15 @@ $(document).ready( function() {
 				var scoreRaw = "cmi.objectives." + i + ".score.raw";
 				var scoreScaled = "cmi.objectives." + i + ".score.scaled";
 				
-				if (idObjective == "step1style3") {
-					doSetValue(status, CMI_OBJECTIVES_SUCCESS_STATUS_FAILED);
+				if (idObjective == objectiveName) {
 					doSetValue(scoreRaw, 0);
 					doSetValue(scoreScaled, 1);
+					if (statusPassed) {
+						doSetValue(status, CMI_OBJECTIVES_SUCCESS_STATUS_PASSED);
+					}
+					else{
+						doSetValue(status, CMI_OBJECTIVES_SUCCESS_STATUS_FAILED);
+					}
 				}
 			}
 		}			
