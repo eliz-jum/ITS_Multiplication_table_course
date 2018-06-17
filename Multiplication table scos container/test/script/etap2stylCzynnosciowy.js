@@ -203,9 +203,7 @@ $(document).ready( function() {
 						$('#errorMessage3').removeClass('is-hidden');
 						$('#finishButton').removeClass('is-hidden');
 					}
-					
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-					
 				}
 			}
 		});

@@ -13,7 +13,7 @@
 
 <body>
 	<div class="transparent-container">
-		<div id="activeBody">
+		<div id="activeBody" class="is-hidden">
 			<div class="header">
 				<h1>Tłumaczenie przemienności mnożenia - styl realistyczny</h1>
 			</div>
@@ -112,19 +112,28 @@
 						<div class="math-symbol">*</div>
 						<input id="zad2input2">
 					</div>
-					<div class="error-message is-hidden" id="errorMessage3">Niestety to nie jest prawidłowa odpowiedź. Kliknij KONIC, a dostaniesz kolejną szansę z innym zadaniem.</div>
+					<div class="error-message is-hidden" id="errorMessage3">Niestety to nie jest prawidłowa odpowiedź. Kliknij DALEJ, a dostaniesz kolejną szansę z innym zadaniem.</div>
+					<div class="error-message is-hidden" id="errorMessage3Final">Niestety to nie jest prawidłowa odpowiedź.</br>
+					Spróbuj poprosić nauczyciela, albo rodziców, żeby wytłumaczyli Ci pojęcie przemienności mnożenia.</div>
 					<div class="congratulations-message is-hidden" id="congratMessage3">Wspaniale!</div>
-					
 				</div>
 			</div>
 
 			<div id="finishButton" class="is-hidden">
-				<button id="finshButton">koniec</button>
+				<button id="finshButton">dalej</button>
 			</div>
 		</div>
 		
 		<div id="finishMessage" class="is-hidden">
 			<h1>Poczekaj, aż nauczyciel zaakceptuje dalszą częsć kursu</h1>
+		</div>
+		
+		<div id="disabledMessage" class="is-hidden">
+			<h1>Już tu byłeś</br>Przejdź dalej</h1>
+		</div>
+		
+		<div id="disabledMessageFinal" class="is-hidden">
+			<h1>To jest koniec kursu</br>Spróbuj poprosić nauczyciela, albo rodziców, żeby wytłumaczyli Ci pojęcie mnożenia.</h1>
 		</div>
 	</div>
 
