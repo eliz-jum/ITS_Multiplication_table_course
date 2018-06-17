@@ -4,20 +4,8 @@ $(document).ready( function() {
 		
 	var step;
 	var objective;
-	var a ;
 	
-	setA();
-	if (a==1) {
-		console.log('ha a a a');
-	}
-	function setA	() {
-		a=1;
-	}	
-	
-	
-	console.log('przed getObjectives');
 	getObjectives();
-	console.log('po getObjectives');
 	
 	function getObjectives() {
 		doInitialize();
@@ -27,17 +15,9 @@ $(document).ready( function() {
 			console.log('jestem w bjectives count');
 			var idObjective = doGetValue("cmi.objectives." + i + ".id");
 			var status = "cmi.objectives." + i + ".success_status";
-			//var scoreRaw = "cmi.objectives." + i + ".score.raw";
-			//var scoreScaled = "cmi.objectives." + i + ".score.scaled";
-			
 			if (idObjective == "stepChoosing") {
 				console.log('status passed '+ doGetValue(status));
-				console.log('status passed type '+ typeof doGetValue(status));
-				//console.log('score raw: ' + doGetValue(scoreRaw));
-				//console.log('score scaled 1 ' + doGetValue(scoreScaled));
 				objective = doGetValue(status);
-				
-				
 			}
 		}
 	}

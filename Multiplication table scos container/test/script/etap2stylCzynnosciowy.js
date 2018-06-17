@@ -166,10 +166,11 @@ $(document).ready( function() {
 
 	
 	$("#finishButton").click(function(){
+		$(this).addClass('disabled');
 		getScoByKeyword()
 		$('#finishMessage').removeClass('is-hidden');
 		$('#activeBody').addClass('is-hidden');
-		//setObjectivesStatusForSCO();
+		setObjectivesStatusForSCO();
 	});
 	
 	
