@@ -226,6 +226,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 						<imsss:objective objectiveID="step3part0" satisfiedByMeasure="false">
 							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part0" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
+						<imsss:objective objectiveID="step3part1" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part1" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>
 			</item>
