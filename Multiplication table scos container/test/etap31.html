@@ -13,7 +13,7 @@
 
 <body>
 	<div class="transparent-container">
-		<div id="activeBody">
+		<div id="activeBody" class="is-hidden">
 			<div class="header">
 				<h1>Utrwalanie mnożenia 1</h1>
 			</div>
@@ -134,7 +134,7 @@
 						<div class="math-symbol">*</div>
 						<div class="frame">7</div>
 						<div class="math-symbol">=</div>
-						<input id="zad3input1" class="zad2-input">
+						<input id="zad3input1">
 					</div>
 					<div class="error-message is-hidden" id="errorMessage5">Niestety to nie jest prawidłowa odpowiedź. Musisz cofnąć się do mnożenia przez 0.</div>
 					<div class="congratulations-message is-hidden" id="congratMessage5">Wspaniale!</div>
@@ -143,12 +143,16 @@
 
 			
 			<div id="finishButton" class="is-hidden">
-				<button id="finshButton">koniec</button>
+				<button id="finshButton">dalej</button>
 			</div>
 		</div>
 		
 		<div id="finishMessage" class="is-hidden">
 			<h1>Poczekaj, aż nauczyciel zaakceptuje dalszą częsć kursu</h1>
+		</div>
+		
+		<div id="disabledMessage" class="is-hidden">
+			<h1>Już tu byłeś</br>Przejdź dalej</h1>
 		</div>
 	</div>
 

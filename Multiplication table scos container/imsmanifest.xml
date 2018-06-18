@@ -223,8 +223,8 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 					<imsss:deliveryControls completionSetByContent="true" />
 					<imsss:objectives>
 						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
-						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
-							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						<imsss:objective objectiveID="step3part0" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part0" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>
@@ -248,8 +248,11 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 					<imsss:deliveryControls completionSetByContent="true" />
 					<imsss:objectives>
 						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
-						<imsss:objective objectiveID="learningStyle" satisfiedByMeasure="false">
-							<imsss:mapInfo targetObjectiveID="multiplicationTable.learningStyle" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						<imsss:objective objectiveID="step3part1" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part1" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part0" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part0" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>
