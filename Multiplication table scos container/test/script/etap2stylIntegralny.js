@@ -100,7 +100,7 @@ $(document).ready( function() {
 				var firstNumber = input1.val();
 				var secondNumber = input2.val();
 				
-				if (firstNumber==4 && secondNumber==6) {
+				if (firstNumber==5 && secondNumber==7) {
 					setObjectiveStatus('courseFailed', 1);
 					step = 'etap30';
 					input1.addClass("correct disabled");
@@ -137,7 +137,7 @@ $(document).ready( function() {
 				var firstNumber = input1.val();
 				var secondNumber = input2.val();
 				
-				if (firstNumber==4 && secondNumber==6) {
+				if (firstNumber==5 && secondNumber==7) {
 					setObjectiveStatus('courseFailed', 1);
 					step = 'etap30';
 					input1.addClass("correct disabled");

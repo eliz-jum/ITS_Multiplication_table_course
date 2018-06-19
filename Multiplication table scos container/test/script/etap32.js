@@ -6,7 +6,7 @@ $(document).ready( function() {
 	var taskPart = 1;
 	var task2Part = 1;
 	var goBack = 0;
-	var objective = getObjectiveStatus('step3part1');
+	var objective = getObjectiveStatus('step3part2');
 	
 	function getObjectiveStatus(objective) {
 		doInitialize();
@@ -128,7 +128,7 @@ $(document).ready( function() {
 			var input = $(this);
 			var number = input.val();
 			if ( number.toString()=='0') {
-				step = 'etap32';
+				step = 'etap33';
 				setObjectiveStatus('step3part2',1);
 				input.addClass("correct disabled");
 				$('#congratMessage5').removeClass('is-hidden');
@@ -155,7 +155,7 @@ $(document).ready( function() {
 			}
 			$('#finishMessage').removeClass('is-hidden');
 			$('#activeBody').addClass('is-hidden');
-			setObjectiveStatus('step3part1', 0);
+			setObjectiveStatus('step3part2', 0);
 		});
 		
 		
