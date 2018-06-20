@@ -69,6 +69,7 @@ $(document).ready( function() {
 			var result = firstNumber * secondNumber;
 			
 			if (result.toString().length==2) {
+				//jak sie za szybko wpisze liczbe dwucyfrowa to dwa razy wejdzie u i dwa razy posniesie counter ale nie wiem co z tym zrobic
 				if (number.toString().length==2) {
 					if ( number.toString()==result.toString() ) {
 						task2partCounter++;
@@ -97,13 +98,13 @@ $(document).ready( function() {
 					input.addClass("correct disabled");
 					$('#errorMessage1').addClass('is-hidden');
 					if (task2partCounter<10){
-							input.parent().parent().next().removeClass('is-hidden');
-						}
-						else{
-							$('#congratMessage1').removeClass('is-hidden');
-							$('#zad3').removeClass('is-hidden');
-						}
-						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+						input.parent().parent().next().removeClass('is-hidden');
+					}
+					else{
+						$('#congratMessage1').removeClass('is-hidden');
+						$('#zad3').removeClass('is-hidden');
+					}
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 				else {
 					input.addClass("incorrect");
