@@ -65,11 +65,10 @@ $(document).ready( function() {
 			var number = input.val();
 			if ( number.toString()=='0') {
 				task2Part++;
-				
-					input.removeClass("incorrect");
-					input.addClass("correct disabled");
-					errorMessage.addClass('is-hidden');
-					nextTaskPart.removeClass('is-hidden');
+				input.removeClass("incorrect");
+				input.addClass("correct disabled");
+				errorMessage.addClass('is-hidden');
+				nextTaskPart.removeClass('is-hidden');
 				
 				if (task2Part==5) {
 					step = 'etap31';

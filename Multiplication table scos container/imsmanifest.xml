@@ -257,6 +257,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 						<imsss:objective objectiveID="step3part0" satisfiedByMeasure="false">
 							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part0" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
+						<imsss:objective objectiveID="step3part2" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part2" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>
 			</item>
@@ -287,6 +290,9 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 						</imsss:objective>
 						<imsss:objective objectiveID="step3part0" satisfiedByMeasure="false">
 							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part0" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part3" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part3" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
 						</imsss:objective>
 					</imsss:objectives>
 				</imsss:sequencing>

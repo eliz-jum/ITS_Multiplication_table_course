@@ -3,8 +3,9 @@
 $(document).ready( function() {
 		
 	var step;
-	var taskPart = 1;
-	var task2Part = 1;
+	var taskPartCounter = 1;
+	var task2partCounter = 0;
+	var task3partCounter = 0;
 	var goBack = 0;
 	var objective = getObjectiveStatus('step3part2');
 	
@@ -47,9 +48,9 @@ $(document).ready( function() {
 		});
 		
 		$("#nextButton").click(function(){
-			taskPart++;
-			var taskId = '#zad1part'+taskPart;
-			if (taskPart<6) {
+			taskPartCounter++;
+			var taskId = '#zad1part'+taskPartCounter;
+			if (taskPartCounter<3) { //11
 				$(taskId).removeClass('is-hidden');
 			}
 			else {
@@ -59,92 +60,138 @@ $(document).ready( function() {
 			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		});
 		
-		$('#zad2input1').keyup(function(){
+		
+		$('.zad2input').keyup(function(){
 			var input = $(this);
 			var number = input.val();
-			if ( number==7 ) {
-				input.removeClass("incorrect");
-				input.addClass("correct disabled");
-				$('#errorMessage1').addClass('is-hidden');
-				$('#zad2part2').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			var firstNumber = input.siblings().eq(0).html();
+			var secondNumber = input.siblings().eq(2).html();
+			var result = firstNumber * secondNumber;
+			
+			if (result.toString().length==2) {
+				if (number.toString().length==2) {
+					if ( number.toString()==result.toString() ) {
+						task2partCounter++;
+						input.removeClass("incorrect");
+						input.addClass("correct disabled");
+						$('#errorMessage1').addClass('is-hidden');
+						if (task2partCounter<10){
+							input.parent().parent().next().removeClass('is-hidden');
+						}
+						else{
+							$('#congratMessage1').removeClass('is-hidden');
+							$('#zad3').removeClass('is-hidden');
+						}
+						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+					}
+					else {
+						input.addClass("incorrect");
+						$('#errorMessage1').removeClass('is-hidden');
+					}
+				}
 			}
-			else {
-				input.addClass("incorrect");
-				$('#errorMessage1').removeClass('is-hidden');
+			else{
+				if ( number.toString()==result.toString() ) {
+					task2partCounter++;
+					input.removeClass("incorrect");
+					input.addClass("correct disabled");
+					$('#errorMessage1').addClass('is-hidden');
+					if (task2partCounter<10){
+							input.parent().parent().next().removeClass('is-hidden');
+						}
+						else{
+							$('#congratMessage1').removeClass('is-hidden');
+							$('#zad3').removeClass('is-hidden');
+						}
+						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				}
+				else {
+					input.addClass("incorrect");
+					$('#errorMessage1').removeClass('is-hidden');
+				}
 			}
 		});
 		
-		$('#zad2input2').keyup(function(){
-			var input = $(this);
-			var number = input.val();
-			if ( number==3 ) {
-				input.removeClass("incorrect");
-				input.addClass("correct disabled");
-				$('#errorMessage2').addClass('is-hidden');
-				$('#zad2part3').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-			else {
-				input.addClass("incorrect");
-				$('#errorMessage2').removeClass('is-hidden');
-			}
-		});	
 		
-		$('#zad2input3').keyup(function(){
+		$('.zad3input').keyup(function(){
 			var input = $(this);
 			var number = input.val();
-			if ( number==9 ) {
-				input.removeClass("incorrect");
-				input.addClass("correct disabled");
-				$('#errorMessage3').addClass('is-hidden');
-				$('#zad2part4').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+			var firstNumber = input.siblings().eq(0).html();
+			var secondNumber = input.siblings().eq(2).html();
+			var result = firstNumber * secondNumber;
+			
+			if (result.toString().length==2) {
+				if (number.toString().length==2) {
+					task3partCounter++;
+					if ( number.toString()==result.toString() ) {
+						input.addClass("correct disabled");
+						if (task3partCounter<4){ //dopoki to nie jest ostatni przyklad
+							input.parent().parent().next().removeClass('is-hidden'); //pokaz nastepny przyklad
+						}
+						else{
+							input.addClass("correct disabled");
+							$('#congratMessage2').removeClass('is-hidden');
+							step = 'etap33';
+							setObjectiveStatus('step3part3',1);
+							$("#finishButton").removeClass('is-hidden');
+						}
+						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+					}
+					else {//zla odpowiedz
+						input.addClass("incorrect disabled");
+						goBack = 1;
+						var goBackNumber = Math.ceil(task3partCounter/2)-1;
+						
+						console.log('counter: '+task3partCounter);
+						console.log('math ceil: '+goBackNumber);
+						console.log('gobacknum: '+goBackNumber);
+						
+						$('#goBackNumber').html(goBackNumber);
+						$('#errorMessage2').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do goBackNumber
+						var nextObjective = 'step3part'+goBackNumber;
+						console.log('cofanie sie do objectivesa: '+nextObjective);
+						setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
+						$("#finishButton").removeClass('is-hidden');
+					}
+				}
 			}
-			else {
-				input.addClass("incorrect");
-				$('#errorMessage3').removeClass('is-hidden');
+			else{
+				task3partCounter++;
+				if ( number.toString()==result.toString() ) {
+					input.addClass("correct disabled");
+					if (task3partCounter<4){ //dopoki to nie jest ostatni przyklad
+						input.parent().parent().next().removeClass('is-hidden'); //pokaz nastepny przyklad
+					}
+					else{
+						input.addClass("correct disabled");
+						$('#congratMessage2').removeClass('is-hidden');
+						step = 'etap33';
+						setObjectiveStatus('step3part3',1);
+						$("#finishButton").removeClass('is-hidden');
+					}
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				}
+				else {//zla odpowiedz
+					input.addClass("incorrect disabled");
+					goBack = 1;
+					var goBackNumber = Math.ceil(task3partCounter/2)-1;
+					
+					console.log('counter: '+task3partCounter);
+						console.log('math ceil: '+goBackNumber);
+						console.log('gobacknum: '+goBackNumber);
+					
+					$('#goBackNumber').html(goBackNumber);
+					$('#errorMessage2').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do goBackNumber
+					var nextObjective = 'step3part'+goBackNumber;
+					console.log('cofanie sie do objectivesa: '+nextObjective);
+					setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
+					$("#finishButton").removeClass('is-hidden');
+				}
 			}
-		});	
-		
-		$('#zad2input4').keyup(function(){
-			var input = $(this);
-			var number = input.val();
-			if ( number==5 ) {
-				input.removeClass("incorrect");
-				input.addClass("correct disabled");
-				$('#errorMessage4').addClass('is-hidden');
-				$('#congratMessage4').removeClass('is-hidden');
-				$('#zad3').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-			else {
-				input.addClass("incorrect");
-				$('#errorMessage4').removeClass('is-hidden');
-			}
-		});	
-		
-		$('#zad3input1').keyup(function(){
-			var input = $(this);
-			var number = input.val();
-			if ( number.toString()=='0') {
-				step = 'etap33';
-				setObjectiveStatus('step3part2',1);
-				input.addClass("correct disabled");
-				$('#congratMessage5').removeClass('is-hidden');
-			}
-			else {
-				//step = 'etap30';
-				console.log('jestem w cofaniu sie');
-				goBack = 1;
-				setObjectiveStatus('step3part0', 1);
-				console.log('etap 3 0: '+getObjectiveStatus('step3part0'));
-				input.addClass("incorrect disabled");
-				$('#errorMessage5').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do 0
-			}
-			$("#finishButton").removeClass('is-hidden');
-			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		});
+	
+		
+		
 		
 		
 		$("#finishButton").click(function(){

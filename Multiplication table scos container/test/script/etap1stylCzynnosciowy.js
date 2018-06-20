@@ -153,18 +153,19 @@ $(document).ready( function() {
 		$('#zad2input2').keyup(function(){
 			var input = $(this);
 			var number = input.val();
-			
-			if (number==12) {
-				input.removeClass("incorrect");
-				input.addClass("correct disabled");
-				$('#errorMessage5').addClass('is-hidden');
-				$('#congratMessage5').removeClass('is-hidden');
-				$('#finishButton').removeClass('is-hidden');
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-			}
-			else {
-				input.addClass("incorrect");
-				$('#errorMessage5').removeClass('is-hidden');
+			if (number.toString().length==2) {
+				if (number==12) {
+					input.removeClass("incorrect");
+					input.addClass("correct disabled");
+					$('#errorMessage5').addClass('is-hidden');
+					$('#congratMessage5').removeClass('is-hidden');
+					$('#finishButton').removeClass('is-hidden');
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+				}
+				else {
+					input.addClass("incorrect");
+					$('#errorMessage5').removeClass('is-hidden');
+				}
 			}
 		});
 

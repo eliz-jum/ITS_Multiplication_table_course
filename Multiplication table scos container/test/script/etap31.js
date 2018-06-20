@@ -129,7 +129,7 @@ $(document).ready( function() {
 			var number = input.val();
 			if ( number.toString()=='0') {
 				step = 'etap32';
-				setObjectiveStatus('step3part2',1);
+				setObjectiveStatus('step3part2',1); //trzba ustawic status na passed, bo byc moze tam byl, zrobilo sie failed, tylko wrocil do wczesniejszych
 				input.addClass("correct disabled");
 				$('#congratMessage5').removeClass('is-hidden');
 			}
