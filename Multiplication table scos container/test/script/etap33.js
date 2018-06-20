@@ -5,7 +5,7 @@ $(document).ready( function() {
 	var step;
 	var taskPartCounter = 1;
 	var goBack = 0;
-	var objective = getObjectiveStatus('step3part2');
+	var objective = getObjectiveStatus('step3part3');
 	
 	function getObjectiveStatus(objective) {
 		doInitialize();
@@ -48,7 +48,7 @@ $(document).ready( function() {
 		$("#nextButton").click(function(){
 			taskPartCounter++;
 			var taskId = '#zad1part'+taskPartCounter;
-			if (taskPartCounter<11) { //11
+			if (taskPartCounter<3) { //11
 				$(taskId).removeClass('is-hidden');
 			}
 			else {
@@ -126,8 +126,8 @@ $(document).ready( function() {
 						else{
 							input.addClass("correct disabled");
 							$('#congratMessage2').removeClass('is-hidden');
-							step = 'etap33';
-							setObjectiveStatus('step3part3',1);
+							step = 'etap34';
+							setObjectiveStatus('step3part4',1);
 							$("#finishButton").removeClass('is-hidden');
 						}
 						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -140,6 +140,7 @@ $(document).ready( function() {
 						$('#goBackNumber').html(goBackNumber);
 						$('#errorMessage2').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do goBackNumber
 						var nextObjective = 'step3part'+goBackNumber;
+						console.log('cofanie sie do objectivesa: '+nextObjective);
 						setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 						$("#finishButton").removeClass('is-hidden');
 					}
@@ -154,8 +155,8 @@ $(document).ready( function() {
 					else{
 						input.addClass("correct disabled");
 						$('#congratMessage2').removeClass('is-hidden');
-						step = 'etap33';
-						setObjectiveStatus('step3part3',1);
+						step = 'etap34';
+						setObjectiveStatus('step3part4',1);
 						$("#finishButton").removeClass('is-hidden');
 					}
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -168,6 +169,7 @@ $(document).ready( function() {
 					$('#goBackNumber').html(goBackNumber);
 					$('#errorMessage2').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do goBackNumber
 					var nextObjective = 'step3part'+goBackNumber;
+					console.log('cofanie sie do objectivesa: '+nextObjective);
 					setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 					$("#finishButton").removeClass('is-hidden');
 				}
@@ -186,7 +188,7 @@ $(document).ready( function() {
 			}
 			$('#finishMessage').removeClass('is-hidden');
 			$('#activeBody').addClass('is-hidden');
-			setObjectiveStatus('step3part2', 0);
+			setObjectiveStatus('step3part3', 0);
 		});
 		
 		
