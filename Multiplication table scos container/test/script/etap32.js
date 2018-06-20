@@ -4,8 +4,6 @@ $(document).ready( function() {
 		
 	var step;
 	var taskPartCounter = 1;
-	var task2partCounter = 0;
-	var task3partCounter = 0;
 	var goBack = 0;
 	var objective = getObjectiveStatus('step3part2');
 	
@@ -50,7 +48,7 @@ $(document).ready( function() {
 		$("#nextButton").click(function(){
 			taskPartCounter++;
 			var taskId = '#zad1part'+taskPartCounter;
-			if (taskPartCounter<3) { //11
+			if (taskPartCounter<11) { //11
 				$(taskId).removeClass('is-hidden');
 			}
 			else {
@@ -69,14 +67,12 @@ $(document).ready( function() {
 			var result = firstNumber * secondNumber;
 			
 			if (result.toString().length==2) {
-				//jak sie za szybko wpisze liczbe dwucyfrowa to dwa razy wejdzie u i dwa razy posniesie counter ale nie wiem co z tym zrobic
 				if (number.toString().length==2) {
 					if ( number.toString()==result.toString() ) {
-						task2partCounter++;
 						input.removeClass("incorrect");
 						input.addClass("correct disabled");
 						$('#errorMessage1').addClass('is-hidden');
-						if (task2partCounter<10){
+						if (input.attr('id')!=='zad2lastInput'){
 							input.parent().parent().next().removeClass('is-hidden');
 						}
 						else{
@@ -93,11 +89,10 @@ $(document).ready( function() {
 			}
 			else{
 				if ( number.toString()==result.toString() ) {
-					task2partCounter++;
 					input.removeClass("incorrect");
 					input.addClass("correct disabled");
 					$('#errorMessage1').addClass('is-hidden');
-					if (task2partCounter<10){
+					if (input.attr('id')!=='zad2lastInput'){
 						input.parent().parent().next().removeClass('is-hidden');
 					}
 					else{
@@ -123,10 +118,9 @@ $(document).ready( function() {
 			
 			if (result.toString().length==2) {
 				if (number.toString().length==2) {
-					task3partCounter++;
 					if ( number.toString()==result.toString() ) {
 						input.addClass("correct disabled");
-						if (task3partCounter<4){ //dopoki to nie jest ostatni przyklad
+						if (input.attr('id')!=='zad3lastInput'){ //dopoki to nie jest ostatni przyklad
 							input.parent().parent().next().removeClass('is-hidden'); //pokaz nastepny przyklad
 						}
 						else{
@@ -157,10 +151,9 @@ $(document).ready( function() {
 				}
 			}
 			else{
-				task3partCounter++;
 				if ( number.toString()==result.toString() ) {
 					input.addClass("correct disabled");
-					if (task3partCounter<4){ //dopoki to nie jest ostatni przyklad
+					if (input.attr('id')!=='zad3lastInput'){ //dopoki to nie jest ostatni przyklad
 						input.parent().parent().next().removeClass('is-hidden'); //pokaz nastepny przyklad
 					}
 					else{
