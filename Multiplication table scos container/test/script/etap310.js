@@ -5,7 +5,8 @@ $(document).ready( function() {
 	var step;
 	var taskPartCounter = 1;
 	var goBack = 0;
-	var objective = getObjectiveStatus('step3part9');
+	var passed = getObjectiveStatus('courseFailed');
+	var objective = getObjectiveStatus('step3part10');
 	
 	function getObjectiveStatus(objective) {
 		doInitialize();
@@ -20,7 +21,12 @@ $(document).ready( function() {
 	}
 	
 	if (objective=='failed') {
-		$('#disabledMessage').removeClass('is-hidden');
+		if (passed=='failed'){
+			$('#disabledMessageFinal').removeClass('is-hidden');
+		}
+		else{
+			$('#disabledMessage').removeClass('is-hidden');
+		}
 	}
 	else {
 		$('#activeBody').removeClass('is-hidden');
@@ -126,8 +132,8 @@ $(document).ready( function() {
 						else{
 							input.addClass("correct disabled");
 							$('#congratMessage2').removeClass('is-hidden');
-							step = 'etap310';
-							setObjectiveStatus('step3part10',1);
+							$('#disabledMessageFinal').removeClass('is-hidden');
+							setObjectiveStatus('courseFailed', 1);
 							$("#finishButton").removeClass('is-hidden');
 						}
 						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -155,8 +161,8 @@ $(document).ready( function() {
 					else{
 						input.addClass("correct disabled");
 						$('#congratMessage2').removeClass('is-hidden');
-						step = 'etap310';
-						setObjectiveStatus('step3part10',1);
+						$('#disabledMessageFinal').removeClass('is-hidden');
+						setObjectiveStatus('courseFailed', 1);
 						$("#finishButton").removeClass('is-hidden');
 					}
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -169,9 +175,6 @@ $(document).ready( function() {
 					$('#goBackNumber').html(goBackNumber);
 					$('#errorMessage2').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do goBackNumber
 					var nextObjective = 'step3part'+goBackNumber;
-					
-					console.log()
-					
 					console.log('cofanie sie do objectivesa: '+nextObjective);
 					setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 					$("#finishButton").removeClass('is-hidden');
@@ -191,7 +194,7 @@ $(document).ready( function() {
 			}
 			$('#finishMessage').removeClass('is-hidden');
 			$('#activeBody').addClass('is-hidden');
-			setObjectiveStatus('step3part9', 0);
+			setObjectiveStatus('step3part10', 0);
 		});
 		
 		

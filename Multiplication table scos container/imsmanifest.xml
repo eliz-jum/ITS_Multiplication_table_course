@@ -620,6 +620,61 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 				</imsss:sequencing>
 			</item>
 			
+			<item identifier="etap3101" identifierref="etap310" isvisible="true">
+				<title>Utrwalanie mnozenia 10</title>
+				<metadata> 
+					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
+						<general> 
+							<keyword> 
+								<string language="en">etap310:1:AWN</string> 
+							</keyword>  
+						</general>  
+					</lom> 
+				</metadata> 
+				<imsss:sequencing>
+					<imsss:objectives>
+						<imsss:objective objectiveID="its.run"></imsss:objective>
+					</imsss:objectives>
+					<imsss:deliveryControls completionSetByContent="true" />
+					<imsss:objectives>
+						<imsss:primaryObjective objectiveID="PRIMARYOBJ" />
+						<imsss:objective objectiveID="step3part10" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part10" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part9" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part9" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part8" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part8" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part7" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part7" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part6" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part6" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part5" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part5" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part4" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part4" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part3" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part3" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part2" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part2" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part1" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part1" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+						<imsss:objective objectiveID="step3part0" satisfiedByMeasure="false">
+							<imsss:mapInfo targetObjectiveID="multiplicationTable.step3part0" readNormalizedMeasure="true" writeNormalizedMeasure="true" readSatisfiedStatus="true" writeSatisfiedStatus="true" />
+						</imsss:objective>
+					</imsss:objectives>
+				</imsss:sequencing>
+			</item>
+			
 			
 			<imsss:sequencing>
 				<imsss:controlMode choice="true" flow="true" />
@@ -773,6 +828,13 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 		<resource identifier="etap39" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap39.html">
 			<file href="etap39.html" />
 			<file href="script/etap39.js" />
+			<file href="style/etap3.css" />
+			<dependency identifierref="globalAssests" />
+		</resource>
+		
+		<resource identifier="etap310" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap310.html">
+			<file href="etap310.html" />
+			<file href="script/etap310.js" />
 			<file href="style/etap3.css" />
 			<dependency identifierref="globalAssests" />
 		</resource>
