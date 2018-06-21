@@ -5,7 +5,7 @@ $(document).ready( function() {
 	var step;
 	var taskPartCounter = 1;
 	var goBack = 0;
-	var objective = getObjectiveStatus('step3part8');
+	var objective = getObjectiveStatus('step3part9');
 	
 	function getObjectiveStatus(objective) {
 		doInitialize();
@@ -48,7 +48,7 @@ $(document).ready( function() {
 		$("#nextButton").click(function(){
 			taskPartCounter++;
 			var taskId = '#zad1part'+taskPartCounter;
-			if (taskPartCounter<11) { //11
+			if (taskPartCounter<3) { //11
 				$(taskId).removeClass('is-hidden');
 			}
 			else {
@@ -126,8 +126,8 @@ $(document).ready( function() {
 						else{
 							input.addClass("correct disabled");
 							$('#congratMessage2').removeClass('is-hidden');
-							step = 'etap39';
-							setObjectiveStatus('step3part9',1);
+							step = 'etap310';
+							setObjectiveStatus('step3part10',1);
 							$("#finishButton").removeClass('is-hidden');
 						}
 						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -155,8 +155,8 @@ $(document).ready( function() {
 					else{
 						input.addClass("correct disabled");
 						$('#congratMessage2').removeClass('is-hidden');
-						step = 'etap39';
-						setObjectiveStatus('step3part9',1);
+						step = 'etap310';
+						setObjectiveStatus('step3part10',1);
 						$("#finishButton").removeClass('is-hidden');
 					}
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -191,7 +191,7 @@ $(document).ready( function() {
 			}
 			$('#finishMessage').removeClass('is-hidden');
 			$('#activeBody').addClass('is-hidden');
-			setObjectiveStatus('step3part8', 0);
+			setObjectiveStatus('step3part9', 0);
 		});
 		
 		

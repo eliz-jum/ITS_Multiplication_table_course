@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>etap39</title>
+
+	<link rel="stylesheet" href="style/etap3.css" type="text/css">
+	<script src="global/APIWrapper.js"></script>
+	<script src="global/SCORMTestWrapper.js"></script>
+	<script src="global/jquery-3.3.1.min.js"></script>	
+	<script src="script/etap39.js"></script>	
+</head>
+
+<body>
+	<div class="transparent-container">
+		<div id="activeBody" class="is-hidden">
+			<div class="header">
+				<h1>Utrwalanie mnożenia przez 9</h1>
+			</div>
+
+			<div id="zad1" class="step-task-container">
+				<div class="title">
+					<h2>Mnożenie przez 9</h2>
+				</div>
+				<div class="content">
+					<div id="operation" class="operation">
+						<div class="frame">9</div>
+						<div class="math-symbol">*</div>
+						<div class="frame">1</div>
+						<div class="math-symbol">=</div>
+						<div class="frame">9</div>
+					</div>
+					<div id="zad1part2"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">2</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">18</div>
+						</div>
+					</div>
+					<div id="zad1part3"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">3</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">27</div>
+						</div>
+					</div>
+					<div id="zad1part4"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">4</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">36</div>
+						</div>
+					</div>
+					<div id="zad1part5"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">5</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">45</div>
+						</div>
+					</div>
+					<div id="zad1part6"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">6</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">54</div>
+						</div>
+					</div>
+					<div id="zad1part7"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">7</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">63</div>
+						</div>
+					</div>
+					<div id="zad1part8"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">8</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">72</div>
+						</div>
+					</div>
+					<div id="zad1part9"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">9</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">81</div>
+						</div>
+					</div>
+					<div id="zad1part10"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">10</div>
+							<div class="math-symbol">=</div>
+							<div class="frame">90</div>
+						</div>
+					</div>
+					
+					<div id="nextButtonDiv" class="next-button">
+						<button id="nextButton">dalej</button>
+					</div>
+				</div>	
+			</div>		
+				
+			<div id="zad2" class="step-task-container is-hidden">
+				<div class="title">
+					<h2>Rozwiąż wszystkie przykłady</h2>
+				</div>
+				<div class="content">
+					<h3>Napisz wyniki mnożenia:</h3>
+					<div id="zad2part1" >
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">7</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part2"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">3</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part3"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">9</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part4"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">5</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part5"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">8</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part6"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">6</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part7"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">1</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">9</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part8"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">2</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">9</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part9"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">10</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">9</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input">
+						</div>
+					</div>
+					<div id="zad2part10"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">4</div>
+							<div class="math-symbol">=</div>
+							<input class="zad2input" id="zad2lastInput">
+						</div>
+					</div>
+					
+					<div class="error-message is-hidden" id="errorMessage1">Sprawdź w przykładach na górze.</div>
+					<div class="congratulations-message is-hidden" id="congratMessage1">Wspaniale!</div>
+				</div>
+			</div>
+
+			
+			
+			<div id="zad3" class="step-task-container is-hidden">
+				<div class="title">
+					<h2>Przypomnienie poprzednich tabliczek mnożenia</h2>
+				</div>
+				<div class="content">
+					<h3>Pamiętasz poprzednie tabliczki?</h3>
+					<div id="1" >
+						<div id="operation" class="operation">
+							<div class="frame">0</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">1</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="2"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">4</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">0</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="3"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">2</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">1</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="4"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">1</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">7</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="5"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">2</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">8</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="6"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">4</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">2</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="7"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">3</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">4</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="8"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">6</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">3</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="9"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">8</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">4</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="10"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">6</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">4</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="11"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">3</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">5</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="12"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">5</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">4</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="13"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">6</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">8</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="14"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">9</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">6</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="15"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">7</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">8</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="16"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">3</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">7</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					
+					<div id="17"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">3</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">8</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input">
+						</div>
+					</div>
+					<div id="18"  class="is-hidden">
+						<div id="operation" class="operation">
+							<div class="frame">8</div>
+							<div class="math-symbol">*</div>
+							<div class="frame">4</div>
+							<div class="math-symbol">=</div>
+							<input class="zad3input" id="zad3lastInput">
+						</div>
+					</div>
+					
+					
+					<div class="error-message is-hidden" id="errorMessage2">Niestety to nie jest prawidłowa odpowiedź. Musisz cofnąć się do mnożenia przez <span id="goBackNumber">0</span>.</div>
+					<div class="congratulations-message is-hidden" id="congratMessage2">Wspaniale!</div>
+				</div>
+			</div>
+
+			
+			<div id="finishButton" class="is-hidden">
+				<button id="finshButton">dalej</button>
+			</div>
+		</div>
+		
+		<div id="finishMessage" class="is-hidden">
+			<h1>Poczekaj, aż nauczyciel zaakceptuje dalszą częsć kursu</h1>
+		</div>
+		
+		<div id="disabledMessage" class="is-hidden">
+			<h1>Już tu byłeś</br>Przejdź dalej</h1>
+		</div>
+	</div>
+
+</body>
+</html>
