@@ -99,7 +99,7 @@ $(document).ready( function() {
 				
 		function getScoByKeyword(){
 			doInitialize();
-			
+			console.log('jestem w set keyword, keyword to: '+step);
 			var objectivesCount = doGetValue("cmi.objectives._count");
 			var keywordOfWrong = step;
 			var recommendationRule = "KEYWORD_EQUAL_TO";
@@ -117,6 +117,7 @@ $(document).ready( function() {
 		}		
 				
 		function setObjectiveStatus (objectiveName, statusPassed) {
+			console.log('jestem w set set objetives, ');
 			var objectivesCount = doGetValue("cmi.objectives._count");
 			for (var i = 0; i < objectivesCount; i++) {
 				var idObjective = doGetValue("cmi.objectives." + i + ".id");
@@ -133,6 +134,7 @@ $(document).ready( function() {
 					else{
 						doSetValue(status, CMI_OBJECTIVES_SUCCESS_STATUS_FAILED);
 					}
+					console.log('jestem w set set objetives,     '+objectiveName+' ststus to: '+ doGetValue(status));
 				}
 			}
 		}	

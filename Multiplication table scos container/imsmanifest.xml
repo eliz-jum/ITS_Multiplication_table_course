@@ -620,13 +620,13 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 				</imsss:sequencing>
 			</item>
 			
-			<item identifier="etap3101" identifierref="etap310" isvisible="true">
+			<item identifier="etap3ostatni1" identifierref="etap3ostatni" isvisible="true">
 				<title>Utrwalanie mnozenia 10</title>
 				<metadata> 
 					<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd"> 
 						<general> 
 							<keyword> 
-								<string language="en">etap310:1:AWN</string> 
+								<string language="en">etap3ostatni:1:AWN</string> 
 							</keyword>  
 						</general>  
 					</lom> 
@@ -686,7 +686,6 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 	
 	
 	<resources>
-	
 		<resource type="webcontent" identifier="globalAssests" xml:base="test/" adlcp:scormType="asset">
 			<file href="global/APIWrapper.js" />
 			<file href="global/SCORMTestWrapper.js" />
@@ -832,7 +831,7 @@ http://ltsc.ieee.org/xsd/LOM lom.xsd">
 			<dependency identifierref="globalAssests" />
 		</resource>
 		
-		<resource identifier="etap310" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap310.html">
+		<resource identifier="etap3ostatni" type="webcontent" xml:base="test/" adlcp:scormType="sco" href="etap310.html">
 			<file href="etap310.html" />
 			<file href="script/etap310.js" />
 			<file href="style/etap3.css" />

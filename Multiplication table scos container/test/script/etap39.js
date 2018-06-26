@@ -126,7 +126,8 @@ $(document).ready( function() {
 						else{
 							input.addClass("correct disabled");
 							$('#congratMessage2').removeClass('is-hidden');
-							step = 'etap310';
+							//step = 'etap310';
+							step = 'etap3ostatni';
 							setObjectiveStatus('step3part10',1);
 							$("#finishButton").removeClass('is-hidden');
 						}
@@ -155,7 +156,9 @@ $(document).ready( function() {
 					else{
 						input.addClass("correct disabled");
 						$('#congratMessage2').removeClass('is-hidden');
-						step = 'etap310';
+						//step = 'etap310';
+						step = 'etap3ostatni';
+						//setObjectiveStatus('step3part10',1);
 						setObjectiveStatus('step3part10',1);
 						$("#finishButton").removeClass('is-hidden');
 					}
