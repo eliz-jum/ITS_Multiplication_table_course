@@ -133,7 +133,7 @@ $(document).ready( function() {
 							input.addClass("correct disabled");
 							$('#congratMessage2').removeClass('is-hidden');
 							$('#disabledMessageFinal').removeClass('is-hidden');
-							setObjectiveStatus('courseFailed', 1);
+							setObjectiveStatus('courseFailed', 0);
 							$("#finishButton").removeClass('is-hidden');
 						}
 						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -162,7 +162,7 @@ $(document).ready( function() {
 						input.addClass("correct disabled");
 						$('#congratMessage2').removeClass('is-hidden');
 						$('#disabledMessageFinal').removeClass('is-hidden');
-						setObjectiveStatus('courseFailed', 1);
+						setObjectiveStatus('courseFailed', 0);
 						$("#finishButton").removeClass('is-hidden');
 					}
 					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -192,7 +192,14 @@ $(document).ready( function() {
 			if (!goBack) {
 				getScoByKeyword()
 			}
-			$('#finishMessage').removeClass('is-hidden');
+			passed = getObjectiveStatus('courseFailed');
+			if (passed=='failed'){
+				$('#disabledMessageFinal').removeClass('is-hidden');
+			}
+			else{
+				$('#finishMessage').removeClass('is-hidden');
+			}
+			
 			$('#activeBody').addClass('is-hidden');
 			setObjectiveStatus('step3part10', 0);
 		});
