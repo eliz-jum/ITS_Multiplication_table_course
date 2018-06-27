@@ -118,19 +118,18 @@ $(document).ready( function() {
 			
 			if (result.toString().length==2) {
 				if (number.toString().length==2) {
-					if ( number.toString()==result.toString() ) {
+					if ( number.toString()==result.toString() ) {//dobra odpowiedz
 						input.addClass("correct disabled");
 						if (input.attr('id')!=='zad3lastInput'){ //dopoki to nie jest ostatni przyklad
 							input.parent().parent().next().removeClass('is-hidden'); //pokaz nastepny przyklad
 						}
-						else{
+						else{//ostatni dobry przyklad - idz do nasteonego mnozenia
 							input.addClass("correct disabled");
 							$('#congratMessage2').removeClass('is-hidden');
 							step = 'etap33';
 							setObjectiveStatus('step3part3',1);
 							$("#finishButton").removeClass('is-hidden');
 						}
-						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 					}
 					else {//zla odpowiedz
 						input.addClass("incorrect disabled");
@@ -143,6 +142,7 @@ $(document).ready( function() {
 						setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 						$("#finishButton").removeClass('is-hidden');
 					}
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 			}
 			else{
@@ -158,7 +158,6 @@ $(document).ready( function() {
 						setObjectiveStatus('step3part3',1);
 						$("#finishButton").removeClass('is-hidden');
 					}
-					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 				else {//zla odpowiedz
 					input.addClass("incorrect disabled");
@@ -171,6 +170,7 @@ $(document).ready( function() {
 					setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 					$("#finishButton").removeClass('is-hidden');
 				}
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		});
 	
@@ -179,6 +179,7 @@ $(document).ready( function() {
 		
 		
 		$("#finishButton").click(function(){
+			setObjectiveStatus('step3part2', 0);
 			$(this).addClass('disabled');
 			//jesli sie cofa do jednego z poprzednich sco, to nie ma co go zaciagac po keywordzie, bo ono juz tam jest
 			if (!goBack) {
@@ -186,7 +187,6 @@ $(document).ready( function() {
 			}
 			$('#finishMessage').removeClass('is-hidden');
 			$('#activeBody').addClass('is-hidden');
-			setObjectiveStatus('step3part2', 0);
 		});
 		
 		

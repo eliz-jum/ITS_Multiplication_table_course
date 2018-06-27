@@ -130,7 +130,6 @@ $(document).ready( function() {
 							setObjectiveStatus('step3part9',1);
 							$("#finishButton").removeClass('is-hidden');
 						}
-						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 					}
 					else {//zla odpowiedz
 						input.addClass("incorrect disabled");
@@ -140,10 +139,10 @@ $(document).ready( function() {
 						$('#goBackNumber').html(goBackNumber);
 						$('#errorMessage2').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do goBackNumber
 						var nextObjective = 'step3part'+goBackNumber;
-						console.log('cofanie sie do objectivesa: '+nextObjective);
 						setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 						$("#finishButton").removeClass('is-hidden');
 					}
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 			}
 			else{
@@ -159,7 +158,6 @@ $(document).ready( function() {
 						setObjectiveStatus('step3part9',1);
 						$("#finishButton").removeClass('is-hidden');
 					}
-					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 				else {//zla odpowiedz
 					input.addClass("incorrect disabled");
@@ -169,13 +167,10 @@ $(document).ready( function() {
 					$('#goBackNumber').html(goBackNumber);
 					$('#errorMessage2').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do goBackNumber
 					var nextObjective = 'step3part'+goBackNumber;
-					
-					console.log()
-					
-					console.log('cofanie sie do objectivesa: '+nextObjective);
 					setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 					$("#finishButton").removeClass('is-hidden');
 				}
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		});
 	

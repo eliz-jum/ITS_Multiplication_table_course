@@ -136,7 +136,6 @@ $(document).ready( function() {
 							setObjectiveStatus('courseFailed', 0);
 							$("#finishButton").removeClass('is-hidden');
 						}
-						$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 					}
 					else {//zla odpowiedz
 						input.addClass("incorrect disabled");
@@ -150,6 +149,7 @@ $(document).ready( function() {
 						setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 						$("#finishButton").removeClass('is-hidden');
 					}
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 			}
 			else{
@@ -165,7 +165,6 @@ $(document).ready( function() {
 						setObjectiveStatus('courseFailed', 0);
 						$("#finishButton").removeClass('is-hidden');
 					}
-					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 				}
 				else {//zla odpowiedz
 					input.addClass("incorrect disabled");
@@ -179,6 +178,7 @@ $(document).ready( function() {
 					setObjectiveStatus(nextObjective, 1);//tam gdzie idzie trzeba ustawic na passed
 					$("#finishButton").removeClass('is-hidden');
 				}
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 			}
 		});
 	

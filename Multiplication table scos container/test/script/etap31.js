@@ -134,11 +134,8 @@ $(document).ready( function() {
 				$('#congratMessage5').removeClass('is-hidden');
 			}
 			else {
-				//step = 'etap30';
-				console.log('jestem w cofaniu sie');
 				goBack = 1;
 				setObjectiveStatus('step3part0', 1);
-				console.log('etap 3 0: '+getObjectiveStatus('step3part0'));
 				input.addClass("incorrect disabled");
 				$('#errorMessage5').removeClass('is-hidden'); //wiadomosc musisz cofnac sie do 0
 			}
